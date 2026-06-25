@@ -1,0 +1,19 @@
+# 忽略节点模块
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 忽略 IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 忽略操作系统文件
+.DS_Store
+Thumbs.db
+
+# 忽略构建产物
+dist/
+.build/
