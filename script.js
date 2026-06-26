@@ -110,11 +110,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 菜单按钮点击事件
   if (menuToggle) {
-    menuToggle.addEventListener('click', function () {
+    menuToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
       if (window.innerWidth <= 768) {
         sidebar.classList.toggle('mobile-open');
       } else {
         sidebar.classList.toggle('collapsed');
+      }
+    });
+    
+    // 移动端：点击 sidebar 外部区域关闭菜单
+    document.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768 && sidebar.classList.contains('mobile-open')) {
+        if (!sidebar.contains(e.target) && e.target !== menuToggle && !menuToggle.contains(e.target)) {
+          sidebar.classList.remove('mobile-open');
+        }
+      }
+    });
+    
+    // 窗口大小变化时同步 sidebar 状态
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        sidebar.classList.remove('mobile-open');
       }
     });
   }
