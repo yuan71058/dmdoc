@@ -1,0 +1,128 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/rec-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<title>鏃犳爣棰樻枃妗�</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:瀹嬩綋;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@瀹嬩綋";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:瀹嬩綋;
+	mso-bidi-font-family:瀹嬩綋;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:瀹嬩綋;
+	mso-bidi-font-family:瀹嬩綋;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='tab-interval:21.0pt'>
+
+<div class=Section1>
+
+<p><span style='font-size:13.5pt'>娴嬭瘯绐楀彛鐨勫悗鍙版ā寮忛潪甯哥畝鍗� <span lang=EN-US></span></span></p>
+
+<p><span style='font-size:13.5pt'>浠庨鑹� 榧犳爣 閿洏涓変釜 渚濇杩涜娴嬭瘯鍗冲彲<span lang=EN-US>.</span></span></p>
+
+<p><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
+
+<p><span style='font-size:13.5pt;color:red'>姣斿棰滆壊<span lang=EN-US>,</span>鎴戜滑鍙互濡備笅娴嬭瘯<span
+lang=EN-US>,</span>鍏朵腑鐨�<span lang=EN-US>gdi</span>妯″紡浣犲彲浠ユ崲鎴愬埆鐨勯鑹叉ā寮�<span lang=EN-US>,</span>鐪嬪摢绉嶆ā寮忓彲浠ユ甯哥殑鍚庡彴鎴浘<span
+lang=EN-US>,</span>閭ｄ箞杩欎釜妯″紡灏辨槸浣犵殑鍚庡彴妯″紡<span lang=EN-US></span></span></p>
+
+<p><span style='font-size:13.5pt;color:red'>鎴殑鍒板浘鎴戞槸鏀惧湪浜�<span lang=EN-US>c:</span>鏍圭洰褰曪紙鏍规嵁<span
+lang=EN-US>dm.SetPath</span>鎸囧畾鐨勭洰褰曪級<span lang=EN-US></span></span></p>
+
+<p><span lang=EN-US style='font-size:13.5pt'>set dm =
+createobject(&quot;dm.dmsoft&quot;)<br>
+dm.SetPath &quot;c:&quot;<br>
+hwnd = dm.GetMousePointWindow()<br>
+dm_ret = dm.BindWindow(hwnd,&quot;gdi&quot;,&quot;normal&quot;,&quot;normal&quot;,0)<br>
+dm_ret = dm.Capture(0,0,2000,2000,&quot;screen.bmp&quot;)<br>
+dm_ret = dm.UnBindWindow()<br>
+EndScript</span></p>
+
+<p><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
+
+<p><span style='font-size:13.5pt;color:red'>姣斿榧犳爣<span lang=EN-US>,</span>鍏朵腑鐨�<span
+lang=EN-US>windows</span>浣犲彲浠ユ崲鎴愬叾瀹冩ā寮�<span lang=EN-US>,</span>娴嬭瘯榧犳爣瑕佹敞鎰�<span
+lang=EN-US>,</span>鍧愭爣鐐�<span lang=EN-US>(100,100)</span>瑕佹崲鎴愮獥<span class=GramE>鍙ｉ噷鏈�</span>鎰忎箟鐨勭偣<span
+lang=EN-US>,</span>姣斿鏌愪釜鎸夐挳绛�<span lang=EN-US>.</span></span></p>
+
+<p><span lang=EN-US style='font-size:13.5pt'>set dm =
+createobject(&quot;dm.dmsoft&quot;)<br>
+hwnd = dm.GetMousePointWindow()<br>
+dm_ret = dm.BindWindow(hwnd,&quot;normal&quot;,&quot;windows&quot;,&quot;normal&quot;,0)<br>
+dm.MoveTo 100,100<br>
+<span class=GramE>Delay<span style='mso-spacerun:yes'>&nbsp; </span>100</span><br>
+dm.LeftClick<br>
+Delay<span style='mso-spacerun:yes'>&nbsp; </span>100<br>
+dm_ret = dm.UnBindWindow()<br>
+EndScript</span></p>
+
+<p><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
+
+<p><span style='font-size:13.5pt;color:red'>姣斿閿洏<span lang=EN-US>,</span>鍏朵腑鐨�<span
+lang=EN-US>windows</span>浣犲彲浠ユ崲鎴愬叾瀹冩ā寮�<span lang=EN-US>.</span>娉ㄦ剰涓嬮潰鐨勬寜涓嬬殑铏氭嫙閿洏鐮�<span
+lang=EN-US>68</span>瑕佹牴鎹獥鍙ｆ崲鎴愭湁鎰忎箟鐨勬寜閿�<span lang=EN-US>.</span></span></p>
+
+<p><span lang=EN-US style='font-size:13.5pt'>set dm =
+createobject(&quot;dm.dmsoft&quot;)<br>
+hwnd = dm.GetMousePointWindow()<br>
+dm_ret =
+dm.BindWindow(hwnd,&quot;normal&quot;,&quot;normal&quot;,&quot;windows&quot;,0)<br>
+dm.KeyPress 68<br>
+Delay<span style='mso-spacerun:yes'>&nbsp; </span>100<br>
+dm_ret = dm.UnBindWindow()<br>
+EndScript</span></p>
+
+<p><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

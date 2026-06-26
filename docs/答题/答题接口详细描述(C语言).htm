@@ -5,7 +5,7 @@
 <meta name=ProgId content=Word.Document>
 
 
-<title>无标题文档</title>
+<title>閺冪姵鐖ｆ０妯绘瀮濡楋拷</title>
 <o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
  name="place"/>
 
@@ -13,7 +13,7 @@
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:宋体;
+	{font-family:鐎瑰缍�;
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-alt:SimSun;
 	mso-font-charset:134;
@@ -21,7 +21,7 @@
 	mso-font-pitch:variable;
 	mso-font-signature:3 135135232 16 0 262145 0;}
 @font-face
-	{font-family:"\@宋体";
+	{font-family:"\@鐎瑰缍�";
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-charset:134;
 	mso-generic-font-family:auto;
@@ -34,8 +34,8 @@
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
-	font-family:宋体;
-	mso-bidi-font-family:宋体;}
+	font-family:鐎瑰缍�;
+	mso-bidi-font-family:鐎瑰缍�;}
 p
 	{mso-margin-top-alt:auto;
 	margin-right:0cm;
@@ -43,8 +43,8 @@ p
 	margin-left:0cm;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
-	font-family:宋体;
-	mso-bidi-font-family:宋体;}
+	font-family:鐎瑰缍�;
+	mso-bidi-font-family:鐎瑰缍�;}
 p.style1, li.style1, div.style1
 	{mso-style-name:style1;
 	mso-margin-top-alt:auto;
@@ -53,8 +53,8 @@ p.style1, li.style1, div.style1
 	margin-left:0cm;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
-	font-family:宋体;
-	mso-bidi-font-family:宋体;
+	font-family:鐎瑰缍�;
+	mso-bidi-font-family:鐎瑰缍�;
 	color:blue;
 	font-weight:bold;}
 span.style11
@@ -81,98 +81,98 @@ div.Section1
 
 <div class=Section1>
 
-<p><span style='font-size:13.5pt;color:fuchsia'>答题接口和答题器之间的通讯协议<span
+<p><span style='font-size:13.5pt;color:fuchsia'>缁涙棃顣介幒銉ュ經閸滃瞼鐡熸０妯烘珤娑斿妫块惃鍕偓姘愁唵閸楀繗顔�<span
 lang=EN-US></span></span></p>
 
-<p><span style='font-size:13.5pt;color:red'>数据结构定义<span lang=EN-US>:</span></span></p>
+<p><span style='font-size:13.5pt;color:red'>閺佺増宓佺紒鎾寸€€规矮绠�<span lang=EN-US>:</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'>// </span><span
-style='font-size:13.5pt;color:red'>答题类型 对应于<span class=SpellE><span lang=EN-US>FaqRequestPacket</span></span>中的<span
+style='font-size:13.5pt;color:red'>缁涙棃顣界猾璇茬€� 鐎电懓绨叉禍锟�<span class=SpellE><span lang=EN-US>FaqRequestPacket</span></span>娑擃厾娈�<span
 class=SpellE><span lang=EN-US>request_type</span></span><span lang=EN-US><br>
 #define REQUEST_TYPE_POS<span style='mso-spacerun:yes'>&nbsp;&nbsp;
 </span>0<span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>// </span>坐标<span lang=EN-US><br>
+</span>// </span>閸ф劖鐖�<span lang=EN-US><br>
 #define REQUEST_TYPE_ABCD<span style='mso-spacerun:yes'>&nbsp; </span>1<span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>// </span>选项<span lang=EN-US><br>
+</span>// </span>闁銆�<span lang=EN-US><br>
 #define REQUEST_TYPE_OTHER 2<span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>// </span>文本<span lang=EN-US><br>
+</span>// </span>閺傚洦婀�<span lang=EN-US><br>
 #define REQUEST_TYPE_DOUBLE_POS 3<span
-style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>双坐标<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>閸欏苯娼楅弽锟�<span
 lang=EN-US></span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'>&nbsp;</span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'>#<span class=SpellE>pragma</span>
-pack(push) //</span><span style='font-size:13.5pt;color:red'>保存对齐状态<span
+pack(push) //</span><span style='font-size:13.5pt;color:red'>娣囨繂鐡ㄧ€靛綊缍堥悩鑸碘偓锟�<span
 lang=EN-US><br>
-#<span class=SpellE>pragma</span> pack(4)//</span>设定为<span lang=EN-US>4</span>字节对齐<span
+#<span class=SpellE>pragma</span> pack(4)//</span>鐠佹儳鐣炬稉锟�<span lang=EN-US>4</span>鐎涙濡€靛綊缍�<span
 lang=EN-US></span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'>// </span><span
-style='font-size:13.5pt;color:red'>发送包结构体<span lang=EN-US><br>
+style='font-size:13.5pt;color:red'>閸欐垿鈧礁瀵樼紒鎾寸€担锟�<span lang=EN-US><br>
 <span class=SpellE>typedef</span> <span class=SpellE>struct</span><br>
 {<br>
-<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>// </span>服务器转发用<span
-lang=EN-US>(</span>分流的时候可能会用到<span lang=EN-US>)<br>
+<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>// </span>閺堝秴濮熼崳銊ㄦ祮閸欐垹鏁�<span
+lang=EN-US>(</span>閸掑棙绁﹂惃鍕閸婃瑥褰查懗鎴掔窗閻€劌鍩�<span lang=EN-US>)<br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>SOCKET <span
 class=SpellE>socket</span>;<span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>// </span>分流上级发送的<span lang=EN-US>socket id.<br>
+</span>// </span>閸掑棙绁︽稉濠勯獓閸欐垿鈧胶娈�<span lang=EN-US>socket id.<br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>char<span
 style='mso-spacerun:yes'>&nbsp; </span><span class=SpellE>ip</span>[32];<span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>// </span>分流上级机器<span lang=EN-US>IP</span></span></p>
+</span>// </span>閸掑棙绁︽稉濠勯獓閺堝搫娅�<span lang=EN-US>IP</span></span></p>
 
 <p style='text-indent:27.0pt'><span lang=EN-US style='font-size:13.5pt;
-color:red'>// </span><span style='font-size:13.5pt;color:red'>客户端内容<span
+color:red'>// </span><span style='font-size:13.5pt;color:red'>鐎广垺鍩涚粩顖氬敶鐎癸拷<span
 lang=EN-US><br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>DWORD <span
-class=SpellE>request_type</span>; // </span>答题类型<span lang=EN-US><br>
+class=SpellE>request_type</span>; // </span>缁涙棃顣界猾璇茬€�<span lang=EN-US><br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>DWORD <span
 class=SpellE>data_len</span>;<span
-style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>真实数据的长度<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>閻喎鐤勯弫鐗堝祦閻ㄥ嫰鏆辨惔锟�<span
 lang=EN-US><br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>char<span
 style='mso-spacerun:yes'>&nbsp; </span>data[1];<span
-style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>数据指针<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>閺佺増宓侀幐鍥嫛<span
 lang=EN-US>.<br>
 }<span class=SpellE>FaqRequestPacket</span>;</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'>// </span><span
-style='font-size:13.5pt;color:red'>接收包结构体<span lang=EN-US><br>
+style='font-size:13.5pt;color:red'>閹恒儲鏁归崠鍛波閺嬪嫪缍�<span lang=EN-US><br>
 <span class=SpellE>typedef</span> <span class=SpellE>struct</span><br>
 {<br>
-<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>// </span>服务器转发用<span
+<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>// </span>閺堝秴濮熼崳銊ㄦ祮閸欐垹鏁�<span
 lang=EN-US><br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>SOCKET <span
 class=SpellE>socket</span>;<span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>// </span>同<span class=SpellE><span lang=EN-US>FaqRequestPacket</span></span><span
+</span>// </span>閸氾拷<span class=SpellE><span lang=EN-US>FaqRequestPacket</span></span><span
 lang=EN-US><br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>char<span
 style='mso-spacerun:yes'>&nbsp; </span><span class=SpellE>ip</span>[32];<span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>// </span>同<span class=SpellE><span lang=EN-US>FaqRequestPacket</span></span><span
+</span>// </span>閸氾拷<span class=SpellE><span lang=EN-US>FaqRequestPacket</span></span><span
 lang=EN-US></span></span></p>
 
 <p style='text-indent:27.0pt'><span lang=EN-US style='font-size:13.5pt;
-color:red'>// </span><span style='font-size:13.5pt;color:red'>客户端内容<span
+color:red'>// </span><span style='font-size:13.5pt;color:red'>鐎广垺鍩涚粩顖氬敶鐎癸拷<span
 lang=EN-US><br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>char result[256];<span
-style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>接收到的答案<span
-lang=EN-US>. </span>文本形式描述<span lang=EN-US>. <br>
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// </span>閹恒儲鏁归崚鎵畱缁涙梹顢�<span
+lang=EN-US>. </span>閺傚洦婀拌ぐ銏犵础閹诲繗鍫�<span lang=EN-US>. <br>
 }<span class=SpellE>FaqReceivePacket</span>;</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'>#<span class=SpellE>pragma</span>
-pack(pop)//</span><span style='font-size:13.5pt;color:red'>恢复对齐状态<span
+pack(pop)//</span><span style='font-size:13.5pt;color:red'>閹垹顦茬€靛綊缍堥悩鑸碘偓锟�<span
 lang=EN-US></span></span></p>
 
 <p><span style='mso-ignore:vglayout;position:
-absolute;z-index:-4;margin-left:-4px;margin-top:4px;width:554px;height:583px'><img width=554 height=583 src="答题接口详细描述(C语言).files/image001.gif" alt=组织结构图 v:shapes="_x0000_s1040 _x0000_s1041 _s1042 _s1043 _s1044 _s1030 _s1030 _s1046 _s1053 _s1030 _s1053"></span><span
-style='font-size:13.5pt;color:red'>通讯过程流程描述<span lang=EN-US><br
+absolute;z-index:-4;margin-left:-4px;margin-top:4px;width:554px;height:583px'><img width=554 height=583 src="缁涙棃顣介幒銉ュ經鐠囷妇绮忛幓蹇氬牚(C鐠囶叀鈻�).files/image001.gif" alt=缂佸嫮绮愮紒鎾寸€崶锟� v:shapes="_x0000_s1040 _x0000_s1041 _s1042 _s1043 _s1044 _s1030 _s1030 _s1046 _s1053 _s1030 _s1053"></span><span
+style='font-size:13.5pt;color:red'>闁俺顔嗘潻鍥┾柤濞翠胶鈻奸幓蹇氬牚<span lang=EN-US><br
 style='mso-special-character:line-break'>
 <br style='mso-special-character:line-break'>
 </span></span></p>
@@ -203,26 +203,26 @@ style='mso-special-character:line-break'>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'>&nbsp;</span></p>
 
-<p><span style='font-size:13.5pt;color:red'>发送数据包详细格式解析<span lang=EN-US>:</span></span></p>
+<p><span style='font-size:13.5pt;color:red'>閸欐垿鈧焦鏆熼幑顔煎瘶鐠囷妇绮忛弽鐓庣础鐟欙絾鐎�<span lang=EN-US>:</span></span></p>
 
-<p><span style='font-size:13.5pt;color:red'>发送的数据包由包头<span lang=EN-US>+</span>数据体
-两部分组成<span lang=EN-US>.</span></span></p>
+<p><span style='font-size:13.5pt;color:red'>閸欐垿鈧胶娈戦弫鐗堝祦閸栧懐鏁遍崠鍛仈<span lang=EN-US>+</span>閺佺増宓佹担锟�
+娑撱倝鍎撮崚鍡欑矋閹达拷<span lang=EN-US>.</span></span></p>
 
-<p><span style='font-size:13.5pt;color:red'>其中包头的长度是<span class=SpellE><span
+<p><span style='font-size:13.5pt;color:red'>閸忔湹鑵戦崠鍛仈閻ㄥ嫰鏆辨惔锔芥Ц<span class=SpellE><span
 lang=EN-US>sizeof</span></span><span lang=EN-US>(<span class=SpellE>FaqRequestPacket</span>).
 </span></span></p>
 
-<p><span style='font-size:13.5pt;color:red'>数据体的长度是<span class=SpellE><span
-lang=EN-US>FaqRequestPacket</span></span>结构体中<span class=SpellE><span
-lang=EN-US>data_len</span></span>指定的长度<span lang=EN-US>. </span>用图形描述如下<span
+<p><span style='font-size:13.5pt;color:red'>閺佺増宓佹担鎾舵畱闂€鍨閺勶拷<span class=SpellE><span
+lang=EN-US>FaqRequestPacket</span></span>缂佹挻鐎担鎾茶厬<span class=SpellE><span
+lang=EN-US>data_len</span></span>閹稿洤鐣鹃惃鍕毐鎼达拷<span lang=EN-US>. </span>閻€劌娴樿ぐ銏″伎鏉╂澘顩ф稉锟�<span
 lang=EN-US>:</span></span></p>
 
 <p><span style='mso-ignore:vglayout;
 position:absolute;z-index:2;margin-left:54px;margin-top:31px;width:518px;
-height:37px'><img width=518 height=37 src="答题接口详细描述(C语言).files/image002.gif" v:shapes="_x0000_s1056"></span><span lang=EN-US style='font-size:
+height:37px'><img width=518 height=37 src="缁涙棃顣介幒銉ュ經鐠囷妇绮忛幓蹇氬牚(C鐠囶叀鈻�).files/image002.gif" v:shapes="_x0000_s1056"></span><span lang=EN-US style='font-size:
 13.5pt;color:red'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='font-size:13.5pt;color:blue'>整个数据包<span lang=EN-US>(</span>发送<span
+</span></span><span style='font-size:13.5pt;color:blue'>閺佺繝閲滈弫鐗堝祦閸栵拷<span lang=EN-US>(</span>閸欐垿鈧拷<span
 lang=EN-US>)</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'><span
@@ -230,69 +230,69 @@ style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span></p>
 
 <p><span style='mso-ignore:vglayout;
 position:absolute;z-index:4;margin-left:315px;margin-top:41px;width:257px;
-height:46px'><img width=257 height=46 src="答题接口详细描述(C语言).files/image003.gif" v:shapes="_x0000_s1060"></span><span
+height:46px'><img width=257 height=46 src="缁涙棃顣介幒銉ュ經鐠囷妇绮忛幓蹇氬牚(C鐠囶叀鈻�).files/image003.gif" v:shapes="_x0000_s1060"></span><span
 style='mso-ignore:vglayout;position:absolute;z-index:3;margin-left:51px;
-margin-top:41px;width:257px;height:46px'><img width=257 height=46 src="答题接口详细描述(C语言).files/image003.gif" v:shapes="_x0000_s1059"></span><span
+margin-top:41px;width:257px;height:46px'><img width=257 height=46 src="缁涙棃顣介幒銉ュ經鐠囷妇绮忛幓蹇氬牚(C鐠囶叀鈻�).files/image003.gif" v:shapes="_x0000_s1059"></span><span
 lang=EN-US style='font-size:13.5pt;color:red'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
 class=SpellE><span lang=EN-US style='font-size:13.5pt;color:blue'>FaqRequestPacket</span></span><span
 lang=EN-US style='font-size:13.5pt;color:blue'>(12</span><span
-style='font-size:13.5pt;color:blue'>字节<span lang=EN-US>)<span
+style='font-size:13.5pt;color:blue'>鐎涙濡�<span lang=EN-US>)<span
 style='mso-spacerun:yes'>&nbsp; </span>|<span
-style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>数据<span lang=EN-US>(</span>数据头<span
-lang=EN-US>+</span>数据体<span lang=EN-US>)</span></span></p>
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>閺佺増宓�<span lang=EN-US>(</span>閺佺増宓佹径锟�<span
+lang=EN-US>+</span>閺佺増宓佹担锟�<span lang=EN-US>)</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'>&nbsp;</span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-style='font-size:13.5pt;color:blue'>长度<span class=SpellE><span lang=EN-US>sizeof</span></span><span
+style='font-size:13.5pt;color:blue'>闂€鍨<span class=SpellE><span lang=EN-US>sizeof</span></span><span
 lang=EN-US>(<span class=SpellE>FaqRequestPacket</span>)<span
-style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>长度<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>闂€鍨<span
 lang=EN-US>(<span class=SpellE>data_len</span>)</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'>&nbsp;</span></p>
 
-<p><span style='font-size:13.5pt;color:red'>其中数据部分的结构定义如下<span lang=EN-US>:</span></span></p>
+<p><span style='font-size:13.5pt;color:red'>閸忔湹鑵戦弫鐗堝祦闁劌鍨庨惃鍕波閺嬪嫬鐣炬稊澶婎洤娑擄拷<span lang=EN-US>:</span></span></p>
 
-<p><span style='font-size:13.5pt;color:red'>数据部分包含<span lang=EN-US>2</span>部分，数据头和数据体<span
+<p><span style='font-size:13.5pt;color:red'>閺佺増宓侀柈銊ュ瀻閸栧懎鎯�<span lang=EN-US>2</span>闁劌鍨庨敍灞炬殶閹诡喖銇旈崪灞炬殶閹诡喕缍�<span
 lang=EN-US>.<br>
-</span>数据头<span lang=EN-US>12</span>个字节<span lang=EN-US>. </span>前<span
-lang=EN-US>4</span>个字节是一个头标识<span lang=EN-US>. </span>内容是<span lang=EN-US>4</span>个字符<span
+</span>閺佺増宓佹径锟�<span lang=EN-US>12</span>娑擃亜鐡ч懞锟�<span lang=EN-US>. </span>閸擄拷<span
+lang=EN-US>4</span>娑擃亜鐡ч懞鍌涙Ц娑撯偓娑擃亜銇旈弽鍥槕<span lang=EN-US>. </span>閸愬懎顔愰弰锟�<span lang=EN-US>4</span>娑擃亜鐡х粭锟�<span
 lang=EN-US> 'D' 'M' 'F' 'Q'.<br>
-</span>接下来<span lang=EN-US>4</span>个字节的内容表示当前图像有多少帧<span lang=EN-US>. </span>如果是静态图像此值为<span
-lang=EN-US>1</span>或者<span lang=EN-US>65535. (65535</span>表示是<span lang=EN-US>BMP</span>图像数据，<span
-lang=EN-US>65534</span>表示是<span lang=EN-US>TXT</span>文字数据<span lang=EN-US>(</span>文字编码是<span
+</span>閹恒儰绗呴弶锟�<span lang=EN-US>4</span>娑擃亜鐡ч懞鍌滄畱閸愬懎顔愮悰銊с仛瑜版挸澧犻崶鎯у剼閺堝顦跨亸鎴濇姎<span lang=EN-US>. </span>婵″倹鐏夐弰顖炴饯閹礁娴橀崓蹇旑劃閸婇棿璐�<span
+lang=EN-US>1</span>閹存牞鈧拷<span lang=EN-US>65535. (65535</span>鐞涖劎銇氶弰锟�<span lang=EN-US>BMP</span>閸ユ儳鍎氶弫鐗堝祦閿涳拷<span
+lang=EN-US>65534</span>鐞涖劎銇氶弰锟�<span lang=EN-US>TXT</span>閺傚洤鐡ч弫鐗堝祦<span lang=EN-US>(</span>閺傚洤鐡х紓鏍垳閺勶拷<span
 lang=EN-US>GBK))<br>
-</span>再接下来<span lang=EN-US>4</span>个字节表示每帧之间的延时是多少毫秒<span lang=EN-US>. </span>如果是静态图像此值为<span
+</span>閸愬秵甯存稉瀣降<span lang=EN-US>4</span>娑擃亜鐡ч懞鍌濄€冪粈鐑樼槨鐢傜闂傚娈戝鑸垫閺勵垰顦跨亸鎴烆嚑缁夛拷<span lang=EN-US>. </span>婵″倹鐏夐弰顖炴饯閹礁娴橀崓蹇旑劃閸婇棿璐�<span
 lang=EN-US>0</span></span></p>
 
-<p><span style='font-size:13.5pt;color:red'>数据体部分是连续顺序存放图片数据<span lang=EN-US>. </span>按照帧的顺序依次存放<span
-lang=EN-US>. </span>每个帧前的<span lang=EN-US>4</span>个字节表示当前帧有多少个字节<span
-lang=EN-US>.</span>比如<span lang=EN-US><br>
-(</span>长度<span lang=EN-US>)</span>帧数<span lang=EN-US>1(</span>长度<span
-lang=EN-US>)</span>帧数<span lang=EN-US>2</span>……<span lang=EN-US>(</span>长度<span
-lang=EN-US>)</span>帧数<span lang=EN-US>N.<span
-style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>每个帧的图像格式是<span lang=EN-US>jpeg</span>或者<span
-lang=EN-US>bmp</span>格式<span lang=EN-US>,</span>或者是<span lang=EN-US>TXT</span>文字数据<span
+<p><span style='font-size:13.5pt;color:red'>閺佺増宓佹担鎾诲劥閸掑棙妲告潻鐐电敾妞ゅ搫绨€涙ɑ鏂侀崶鍓у閺佺増宓�<span lang=EN-US>. </span>閹稿鍙庣敮褏娈戞い鍝勭碍娓氭繃顐肩€涙ɑ鏂�<span
+lang=EN-US>. </span>濮ｅ繋閲滅敮褍澧犻惃锟�<span lang=EN-US>4</span>娑擃亜鐡ч懞鍌濄€冪粈鍝勭秼閸撳秴鎶氶張澶婎樋鐏忔垳閲滅€涙濡�<span
+lang=EN-US>.</span>濮ｆ柨顩�<span lang=EN-US><br>
+(</span>闂€鍨<span lang=EN-US>)</span>鐢勬殶<span lang=EN-US>1(</span>闂€鍨<span
+lang=EN-US>)</span>鐢勬殶<span lang=EN-US>2</span>閳ワ腹鈧拷<span lang=EN-US>(</span>闂€鍨<span
+lang=EN-US>)</span>鐢勬殶<span lang=EN-US>N.<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>濮ｅ繋閲滅敮褏娈戦崶鎯у剼閺嶇厧绱￠弰锟�<span lang=EN-US>jpeg</span>閹存牞鈧拷<span
+lang=EN-US>bmp</span>閺嶇厧绱�<span lang=EN-US>,</span>閹存牞鈧懏妲�<span lang=EN-US>TXT</span>閺傚洤鐡ч弫鐗堝祦<span
 lang=EN-US><br>
 <br>
-</span>综上<span lang=EN-US>,</span>发送包总的长度描述如下<span lang=EN-US>:<br>
-12</span>字节<span lang=EN-US>(<span class=SpellE>sizeof</span>(<span
-class=SpellE>FaqRequestPacket</span>)) + 12</span>字节<span lang=EN-US>(</span>数据头<span
-lang=EN-US>) + 4</span>字节<span lang=EN-US>(</span>第一帧长度<span lang=EN-US>) + (</span>第一帧数据<span
-lang=EN-US>) + 4</span>字节<span lang=EN-US>(</span>第二帧长度<span lang=EN-US>) + (</span>第二帧数据<span
-lang=EN-US>) + </span>…<span lang=EN-US>.</span></span></p>
+</span>缂侀棿绗�<span lang=EN-US>,</span>閸欐垿鈧礁瀵橀幀鑽ゆ畱闂€鍨閹诲繗鍫俊鍌欑瑓<span lang=EN-US>:<br>
+12</span>鐎涙濡�<span lang=EN-US>(<span class=SpellE>sizeof</span>(<span
+class=SpellE>FaqRequestPacket</span>)) + 12</span>鐎涙濡�<span lang=EN-US>(</span>閺佺増宓佹径锟�<span
+lang=EN-US>) + 4</span>鐎涙濡�<span lang=EN-US>(</span>缁楊兛绔寸敮褔鏆辨惔锟�<span lang=EN-US>) + (</span>缁楊兛绔寸敮褎鏆熼幑锟�<span
+lang=EN-US>) + 4</span>鐎涙濡�<span lang=EN-US>(</span>缁楊兛绨╃敮褔鏆辨惔锟�<span lang=EN-US>) + (</span>缁楊兛绨╃敮褎鏆熼幑锟�<span
+lang=EN-US>) + </span>閳ワ拷<span lang=EN-US>.</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'><br>
-</span><span style='font-size:13.5pt;color:red'>接收包的格式很简单。就不多说了<span
+</span><span style='font-size:13.5pt;color:red'>閹恒儲鏁归崠鍛畱閺嶇厧绱″鍫㈢暆閸楁洏鈧倸姘ㄦ稉宥咁樋鐠囩繝绨�<span
 lang=EN-US>.</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:red'>&nbsp;</span></p>
 
-<p><span style='font-size:13.5pt;color:red'>注意的是，以上只是接收和发送的纯数据格式<span
-lang=EN-US>. </span>真正发送时，还会在包头加上序列号，长度等校验信息<span lang=EN-US>. </span>以下是我用到的发送和接收数据的函数源码<span
-lang=EN-US>. </span>其他语言也可以参考<span lang=EN-US>.</span></span></p>
+<p><span style='font-size:13.5pt;color:red'>濞夈劍鍓伴惃鍕Ц閿涘奔浜掓稉濠傚涧閺勵垱甯撮弨璺烘嫲閸欐垿鈧胶娈戠痪顖涙殶閹诡喗鐗稿锟�<span
+lang=EN-US>. </span>閻喐顒滈崣鎴︹偓浣规閿涘矁绻曟导姘躬閸栧懎銇旈崝鐘辩瑐鎼村繐鍨崣鍑ょ礉闂€鍨缁涘鐗庢灞间繆閹拷<span lang=EN-US>. </span>娴犮儰绗呴弰顖涘灉閻€劌鍩岄惃鍕絺闁礁鎷伴幒銉︽暪閺佺増宓侀惃鍕毐閺佺増绨惍锟�<span
+lang=EN-US>. </span>閸忔湹绮拠顓♀枅娑旂喎褰叉禒銉ュ棘閼帮拷<span lang=EN-US>.</span></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 

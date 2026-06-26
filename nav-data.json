@@ -1,0 +1,1896 @@
+{
+  "Ai": [
+    {
+      "name": "AiEnableFindPicWindow",
+      "cn": ""
+    },
+    {
+      "name": "AiFindPic",
+      "cn": ""
+    },
+    {
+      "name": "AiFindPicEx",
+      "cn": ""
+    },
+    {
+      "name": "AiFindPicMem",
+      "cn": ""
+    },
+    {
+      "name": "AiFindPicMemEx",
+      "cn": ""
+    },
+    {
+      "name": "AiYoloDetectObjects",
+      "cn": ""
+    },
+    {
+      "name": "AiYoloDetectObjectsToDataBmp",
+      "cn": ""
+    },
+    {
+      "name": "AiYoloDetectObjectsToFile",
+      "cn": ""
+    },
+    {
+      "name": "AiYoloFreeModel",
+      "cn": ""
+    },
+    {
+      "name": "AiYoloObjectsToString",
+      "cn": ""
+    },
+    {
+      "name": "AiYoloSetModel",
+      "cn": ""
+    },
+    {
+      "name": "AiYoloSetModelMemory",
+      "cn": ""
+    },
+    {
+      "name": "AiYoloSetVersion",
+      "cn": ""
+    },
+    {
+      "name": "AiYoloSortsObjects",
+      "cn": ""
+    },
+    {
+      "name": "AiYoloUseModel",
+      "cn": ""
+    },
+    {
+      "name": "Ai接口综述",
+      "cn": ""
+    },
+    {
+      "name": "LoadAi",
+      "cn": ""
+    },
+    {
+      "name": "LoadAiMemory",
+      "cn": ""
+    }
+  ],
+  "Foobar": [
+    {
+      "name": "CreateFoobarCustom",
+      "cn": ""
+    },
+    {
+      "name": "CreateFoobarEllipse",
+      "cn": ""
+    },
+    {
+      "name": "CreateFoobarRect",
+      "cn": ""
+    },
+    {
+      "name": "CreateFoobarRoundRect",
+      "cn": ""
+    },
+    {
+      "name": "FoobarClearText",
+      "cn": ""
+    },
+    {
+      "name": "FoobarClose",
+      "cn": ""
+    },
+    {
+      "name": "FoobarDrawLine",
+      "cn": ""
+    },
+    {
+      "name": "FoobarDrawPic",
+      "cn": ""
+    },
+    {
+      "name": "FoobarDrawText",
+      "cn": ""
+    },
+    {
+      "name": "FoobarFillRect",
+      "cn": ""
+    },
+    {
+      "name": "FoobarLock",
+      "cn": ""
+    },
+    {
+      "name": "FoobarPrintText",
+      "cn": ""
+    },
+    {
+      "name": "FoobarSetFont",
+      "cn": ""
+    },
+    {
+      "name": "FoobarSetSave",
+      "cn": ""
+    },
+    {
+      "name": "FoobarSetTrans",
+      "cn": ""
+    },
+    {
+      "name": "FoobarStartGif",
+      "cn": ""
+    },
+    {
+      "name": "FoobarStopGif",
+      "cn": ""
+    },
+    {
+      "name": "FoobarTextLineGap",
+      "cn": ""
+    },
+    {
+      "name": "FoobarTextPrintDir",
+      "cn": ""
+    },
+    {
+      "name": "FoobarTextRect",
+      "cn": ""
+    },
+    {
+      "name": "FoobarUnlock",
+      "cn": ""
+    },
+    {
+      "name": "FoobarUpdate",
+      "cn": ""
+    }
+  ],
+  "内存": [
+    {
+      "name": "DoubleToData",
+      "cn": ""
+    },
+    {
+      "name": "FindData",
+      "cn": ""
+    },
+    {
+      "name": "FindDataEx",
+      "cn": ""
+    },
+    {
+      "name": "FindDouble",
+      "cn": ""
+    },
+    {
+      "name": "FindDoubleEx",
+      "cn": ""
+    },
+    {
+      "name": "FindFloat",
+      "cn": ""
+    },
+    {
+      "name": "FindFloatEx",
+      "cn": ""
+    },
+    {
+      "name": "FindInt",
+      "cn": ""
+    },
+    {
+      "name": "FindIntEx",
+      "cn": ""
+    },
+    {
+      "name": "FindString",
+      "cn": ""
+    },
+    {
+      "name": "FindStringEx",
+      "cn": ""
+    },
+    {
+      "name": "FloatToData",
+      "cn": ""
+    },
+    {
+      "name": "FreeProcessMemory",
+      "cn": ""
+    },
+    {
+      "name": "GetCommandLine",
+      "cn": ""
+    },
+    {
+      "name": "GetModuleBaseAddr",
+      "cn": ""
+    },
+    {
+      "name": "GetModuleSize",
+      "cn": ""
+    },
+    {
+      "name": "GetRemoteApiAddress",
+      "cn": ""
+    },
+    {
+      "name": "Int64ToInt32",
+      "cn": ""
+    },
+    {
+      "name": "IntToData",
+      "cn": ""
+    },
+    {
+      "name": "OpenProcess",
+      "cn": ""
+    },
+    {
+      "name": "ReadData",
+      "cn": ""
+    },
+    {
+      "name": "ReadDataAddr",
+      "cn": ""
+    },
+    {
+      "name": "ReadDataAddrToBin",
+      "cn": ""
+    },
+    {
+      "name": "ReadDataToBin",
+      "cn": ""
+    },
+    {
+      "name": "ReadDouble",
+      "cn": ""
+    },
+    {
+      "name": "ReadDoubleAddr",
+      "cn": ""
+    },
+    {
+      "name": "ReadFloat",
+      "cn": ""
+    },
+    {
+      "name": "ReadFloatAddr",
+      "cn": ""
+    },
+    {
+      "name": "ReadInt",
+      "cn": ""
+    },
+    {
+      "name": "ReadIntAddr",
+      "cn": ""
+    },
+    {
+      "name": "ReadString",
+      "cn": ""
+    },
+    {
+      "name": "ReadStringAddr",
+      "cn": ""
+    },
+    {
+      "name": "SetMemoryFindResultToFile",
+      "cn": ""
+    },
+    {
+      "name": "SetMemoryHwndAsProcessId",
+      "cn": ""
+    },
+    {
+      "name": "SetParam64ToPointer",
+      "cn": ""
+    },
+    {
+      "name": "StringToData",
+      "cn": ""
+    },
+    {
+      "name": "TerminateProcess",
+      "cn": ""
+    },
+    {
+      "name": "TerminateProcessTree",
+      "cn": ""
+    },
+    {
+      "name": "VirtualAllocEx",
+      "cn": ""
+    },
+    {
+      "name": "VirtualFreeEx",
+      "cn": ""
+    },
+    {
+      "name": "VirtualProtectEx",
+      "cn": ""
+    },
+    {
+      "name": "VirtualQueryEx",
+      "cn": ""
+    },
+    {
+      "name": "WriteData",
+      "cn": ""
+    },
+    {
+      "name": "WriteDataAddr",
+      "cn": ""
+    },
+    {
+      "name": "WriteDataAddrFromBin",
+      "cn": ""
+    },
+    {
+      "name": "WriteDataFromBin",
+      "cn": ""
+    },
+    {
+      "name": "WriteDouble",
+      "cn": ""
+    },
+    {
+      "name": "WriteDoubleAddr",
+      "cn": ""
+    },
+    {
+      "name": "WriteFloat",
+      "cn": ""
+    },
+    {
+      "name": "WriteFloatAddr",
+      "cn": ""
+    },
+    {
+      "name": "WriteInt",
+      "cn": ""
+    },
+    {
+      "name": "WriteIntAddr",
+      "cn": ""
+    },
+    {
+      "name": "WriteString",
+      "cn": ""
+    },
+    {
+      "name": "WriteStringAddr",
+      "cn": ""
+    }
+  ],
+  "后台设置": [
+    {
+      "name": "BindWindow",
+      "cn": ""
+    },
+    {
+      "name": "BindWindowEx",
+      "cn": ""
+    },
+    {
+      "name": "DownCpu",
+      "cn": ""
+    },
+    {
+      "name": "EnableBind",
+      "cn": ""
+    },
+    {
+      "name": "EnableFakeActive",
+      "cn": ""
+    },
+    {
+      "name": "EnableIme",
+      "cn": ""
+    },
+    {
+      "name": "EnableKeypadMsg",
+      "cn": ""
+    },
+    {
+      "name": "EnableKeypadPatch",
+      "cn": ""
+    },
+    {
+      "name": "EnableKeypadSync",
+      "cn": ""
+    },
+    {
+      "name": "EnableMouseMsg",
+      "cn": ""
+    },
+    {
+      "name": "EnableMouseSync",
+      "cn": ""
+    },
+    {
+      "name": "EnableRealKeypad",
+      "cn": ""
+    },
+    {
+      "name": "EnableRealMouse",
+      "cn": ""
+    },
+    {
+      "name": "EnableSpeedDx",
+      "cn": ""
+    },
+    {
+      "name": "ForceUnBindWindow",
+      "cn": ""
+    },
+    {
+      "name": "GetBindWindow",
+      "cn": ""
+    },
+    {
+      "name": "GetFps",
+      "cn": ""
+    },
+    {
+      "name": "HackSpeed",
+      "cn": ""
+    },
+    {
+      "name": "IsBind",
+      "cn": ""
+    },
+    {
+      "name": "LockDisplay",
+      "cn": ""
+    },
+    {
+      "name": "LockInput",
+      "cn": ""
+    },
+    {
+      "name": "LockMouseRect",
+      "cn": ""
+    },
+    {
+      "name": "SetAero",
+      "cn": ""
+    },
+    {
+      "name": "SetDisplayDelay",
+      "cn": ""
+    },
+    {
+      "name": "SetDisplayRefreshDelay",
+      "cn": ""
+    },
+    {
+      "name": "SetInputDm",
+      "cn": ""
+    },
+    {
+      "name": "SwitchBindWindow",
+      "cn": ""
+    },
+    {
+      "name": "UnBindWindow",
+      "cn": ""
+    }
+  ],
+  "图色": [
+    {
+      "name": "AppendPicAddr",
+      "cn": ""
+    },
+    {
+      "name": "BGR2RGB",
+      "cn": ""
+    },
+    {
+      "name": "Capture",
+      "cn": ""
+    },
+    {
+      "name": "CaptureGif",
+      "cn": ""
+    },
+    {
+      "name": "CaptureJpg",
+      "cn": ""
+    },
+    {
+      "name": "CapturePng",
+      "cn": ""
+    },
+    {
+      "name": "CapturePre",
+      "cn": ""
+    },
+    {
+      "name": "CmpColor",
+      "cn": ""
+    },
+    {
+      "name": "EnableDisplayDebug",
+      "cn": ""
+    },
+    {
+      "name": "EnableFindPicMultithread",
+      "cn": ""
+    },
+    {
+      "name": "EnableGetColorByCapture",
+      "cn": ""
+    },
+    {
+      "name": "FindColor",
+      "cn": ""
+    },
+    {
+      "name": "FindColorBlock",
+      "cn": ""
+    },
+    {
+      "name": "FindColorBlockEx",
+      "cn": ""
+    },
+    {
+      "name": "FindColorE",
+      "cn": ""
+    },
+    {
+      "name": "FindColorEx",
+      "cn": ""
+    },
+    {
+      "name": "FindMulColor",
+      "cn": ""
+    },
+    {
+      "name": "FindMultiColor",
+      "cn": ""
+    },
+    {
+      "name": "FindMultiColorE",
+      "cn": ""
+    },
+    {
+      "name": "FindMultiColorEx",
+      "cn": ""
+    },
+    {
+      "name": "FindPic",
+      "cn": ""
+    },
+    {
+      "name": "FindPicE",
+      "cn": ""
+    },
+    {
+      "name": "FindPicEx",
+      "cn": ""
+    },
+    {
+      "name": "FindPicExS",
+      "cn": ""
+    },
+    {
+      "name": "FindPicMem",
+      "cn": ""
+    },
+    {
+      "name": "FindPicMemE",
+      "cn": ""
+    },
+    {
+      "name": "FindPicMemEx",
+      "cn": ""
+    },
+    {
+      "name": "FindPicS",
+      "cn": ""
+    },
+    {
+      "name": "FindPicSim",
+      "cn": ""
+    },
+    {
+      "name": "FindPicSimE",
+      "cn": ""
+    },
+    {
+      "name": "FindPicSimEx",
+      "cn": ""
+    },
+    {
+      "name": "FindPicSimMem",
+      "cn": ""
+    },
+    {
+      "name": "FindPicSimMemE",
+      "cn": ""
+    },
+    {
+      "name": "FindPicSimMemEx",
+      "cn": ""
+    },
+    {
+      "name": "FindShape",
+      "cn": ""
+    },
+    {
+      "name": "FindShapeE",
+      "cn": ""
+    },
+    {
+      "name": "FindShapeEx",
+      "cn": ""
+    },
+    {
+      "name": "FreePic",
+      "cn": ""
+    },
+    {
+      "name": "GetAveHSV",
+      "cn": ""
+    },
+    {
+      "name": "GetAveRGB",
+      "cn": ""
+    },
+    {
+      "name": "GetColor",
+      "cn": ""
+    },
+    {
+      "name": "GetColorBGR",
+      "cn": ""
+    },
+    {
+      "name": "GetColorHSV",
+      "cn": ""
+    },
+    {
+      "name": "GetColorNum",
+      "cn": ""
+    },
+    {
+      "name": "GetPicSize",
+      "cn": ""
+    },
+    {
+      "name": "GetScreenData",
+      "cn": ""
+    },
+    {
+      "name": "GetScreenDataBmp",
+      "cn": ""
+    },
+    {
+      "name": "ImageToBmp",
+      "cn": ""
+    },
+    {
+      "name": "IsDisplayDead",
+      "cn": ""
+    },
+    {
+      "name": "LoadPic",
+      "cn": ""
+    },
+    {
+      "name": "LoadPicByte",
+      "cn": ""
+    },
+    {
+      "name": "MatchPicName",
+      "cn": ""
+    },
+    {
+      "name": "RGB2BGR",
+      "cn": ""
+    },
+    {
+      "name": "SetExcludeRegion",
+      "cn": ""
+    },
+    {
+      "name": "SetFindPicMultithreadCount",
+      "cn": ""
+    },
+    {
+      "name": "SetFindPicMultithreadLimit",
+      "cn": ""
+    },
+    {
+      "name": "SetPicPwd",
+      "cn": ""
+    }
+  ],
+  "基本设置": [
+    {
+      "name": "EnablePicCache",
+      "cn": ""
+    },
+    {
+      "name": "GetBasePath",
+      "cn": ""
+    },
+    {
+      "name": "GetDmCount",
+      "cn": ""
+    },
+    {
+      "name": "GetID",
+      "cn": ""
+    },
+    {
+      "name": "GetLastError",
+      "cn": ""
+    },
+    {
+      "name": "GetPath",
+      "cn": ""
+    },
+    {
+      "name": "Reg",
+      "cn": ""
+    },
+    {
+      "name": "RegEx",
+      "cn": ""
+    },
+    {
+      "name": "RegExNoMac",
+      "cn": ""
+    },
+    {
+      "name": "RegNoMac",
+      "cn": ""
+    },
+    {
+      "name": "SetDisplayInput",
+      "cn": ""
+    },
+    {
+      "name": "SetEnumWindowDelay",
+      "cn": ""
+    },
+    {
+      "name": "SetPath",
+      "cn": ""
+    },
+    {
+      "name": "SetShowErrorMsg",
+      "cn": ""
+    },
+    {
+      "name": "SpeedNormalGraphic",
+      "cn": ""
+    },
+    {
+      "name": "Ver",
+      "cn": ""
+    },
+    {
+      "name": "函数调用约定",
+      "cn": ""
+    }
+  ],
+  "常见问题": [
+    {
+      "name": "64位系统如何加载驱动",
+      "cn": ""
+    },
+    {
+      "name": "chrome开启硬件加速后如何后台",
+      "cn": ""
+    },
+    {
+      "name": "LoadPic和FreePic什么时候调用",
+      "cn": ""
+    },
+    {
+      "name": "Regsvr32出现的常见错误",
+      "cn": ""
+    },
+    {
+      "name": "VBS调用规范",
+      "cn": ""
+    },
+    {
+      "name": "一个标准的插件注册和绑定的例子",
+      "cn": ""
+    },
+    {
+      "name": "为什么一绑定窗口就崩溃",
+      "cn": ""
+    },
+    {
+      "name": "为什么不能和别的后台插件混用",
+      "cn": ""
+    },
+    {
+      "name": "为什么会有错误提示(创建HMemDC失败)",
+      "cn": ""
+    },
+    {
+      "name": "为什么插件无法升级",
+      "cn": ""
+    },
+    {
+      "name": "为什么有时候按键和鼠标会点击无效",
+      "cn": ""
+    },
+    {
+      "name": "为什么机器码是空的",
+      "cn": ""
+    },
+    {
+      "name": "为什么模糊识别的速度很慢",
+      "cn": ""
+    },
+    {
+      "name": "为何不建议用Plugin方式调用插件",
+      "cn": ""
+    },
+    {
+      "name": "免责声明",
+      "cn": ""
+    },
+    {
+      "name": "出现vbs被禁用的解决办法",
+      "cn": ""
+    },
+    {
+      "name": "出现坐标越界的解决办法",
+      "cn": ""
+    },
+    {
+      "name": "创建对象失败了怎么办",
+      "cn": ""
+    },
+    {
+      "name": "后台绑定会对哪些接口有影响",
+      "cn": ""
+    },
+    {
+      "name": "如何不注册dm.dll到系统而使用插件",
+      "cn": ""
+    },
+    {
+      "name": "如何使用后台识别",
+      "cn": ""
+    },
+    {
+      "name": "如何使用本插件",
+      "cn": ""
+    },
+    {
+      "name": "如何使用相对路径来设置字库路径",
+      "cn": ""
+    },
+    {
+      "name": "如何使用绝对路径来设置字库",
+      "cn": ""
+    },
+    {
+      "name": "如何保证注册码的安全",
+      "cn": ""
+    },
+    {
+      "name": "如何修改dm.dll的对象名(dm.dmsoft)",
+      "cn": ""
+    },
+    {
+      "name": "如何前台切换多开",
+      "cn": ""
+    },
+    {
+      "name": "如何可以后台识别鼠标特征码",
+      "cn": ""
+    },
+    {
+      "name": "如何在单脚本内操作多窗口",
+      "cn": ""
+    },
+    {
+      "name": "如何在多线程下使用",
+      "cn": ""
+    },
+    {
+      "name": "如何手动注册插件到系统",
+      "cn": ""
+    },
+    {
+      "name": "如何知道我的后台模式",
+      "cn": ""
+    },
+    {
+      "name": "如何配置沙盘才可以后台绑定",
+      "cn": ""
+    },
+    {
+      "name": "对于边缘模糊的文字怎么识别",
+      "cn": ""
+    },
+    {
+      "name": "按键多线程调用插件",
+      "cn": ""
+    },
+    {
+      "name": "插件接口生效范围",
+      "cn": ""
+    },
+    {
+      "name": "插件释放到Plugin目录会有什么问题",
+      "cn": ""
+    },
+    {
+      "name": "收费功能资费事宜",
+      "cn": ""
+    },
+    {
+      "name": "本机文字识别正常,别的机器为何不正常",
+      "cn": ""
+    },
+    {
+      "name": "目前插件收费功能列表",
+      "cn": ""
+    },
+    {
+      "name": "部分64位系统无法运行vbs的解决办法",
+      "cn": ""
+    }
+  ],
+  "文件": [
+    {
+      "name": "CopyFile",
+      "cn": ""
+    },
+    {
+      "name": "CreateFolder",
+      "cn": ""
+    },
+    {
+      "name": "DecodeFile",
+      "cn": ""
+    },
+    {
+      "name": "DeleteFile",
+      "cn": ""
+    },
+    {
+      "name": "DeleteFolder",
+      "cn": ""
+    },
+    {
+      "name": "DeleteIni",
+      "cn": ""
+    },
+    {
+      "name": "DeleteIniPwd",
+      "cn": ""
+    },
+    {
+      "name": "DownloadFile",
+      "cn": ""
+    },
+    {
+      "name": "EncodeFile",
+      "cn": ""
+    },
+    {
+      "name": "EnumIniKey",
+      "cn": ""
+    },
+    {
+      "name": "EnumIniKeyPwd",
+      "cn": ""
+    },
+    {
+      "name": "EnumIniSection",
+      "cn": ""
+    },
+    {
+      "name": "EnumIniSectionPwd",
+      "cn": ""
+    },
+    {
+      "name": "GetFileLength",
+      "cn": ""
+    },
+    {
+      "name": "GetRealPath",
+      "cn": ""
+    },
+    {
+      "name": "IsFileExist",
+      "cn": ""
+    },
+    {
+      "name": "IsFolderExist",
+      "cn": ""
+    },
+    {
+      "name": "MoveFile",
+      "cn": ""
+    },
+    {
+      "name": "ReadFile",
+      "cn": ""
+    },
+    {
+      "name": "ReadIni",
+      "cn": ""
+    },
+    {
+      "name": "ReadIniPwd",
+      "cn": ""
+    },
+    {
+      "name": "SelectDirectory",
+      "cn": ""
+    },
+    {
+      "name": "SelectFile",
+      "cn": ""
+    },
+    {
+      "name": "WriteFile",
+      "cn": ""
+    },
+    {
+      "name": "WriteIni",
+      "cn": ""
+    },
+    {
+      "name": "WriteIniPwd",
+      "cn": ""
+    }
+  ],
+  "文字识别": [
+    {
+      "name": "AddDict",
+      "cn": ""
+    },
+    {
+      "name": "ClearDict",
+      "cn": ""
+    },
+    {
+      "name": "EnableShareDict",
+      "cn": ""
+    },
+    {
+      "name": "FetchWord",
+      "cn": ""
+    },
+    {
+      "name": "FindStr",
+      "cn": ""
+    },
+    {
+      "name": "FindStrE",
+      "cn": ""
+    },
+    {
+      "name": "FindStrEx",
+      "cn": ""
+    },
+    {
+      "name": "FindStrExS",
+      "cn": ""
+    },
+    {
+      "name": "FindStrFast",
+      "cn": ""
+    },
+    {
+      "name": "FindStrFastE",
+      "cn": ""
+    },
+    {
+      "name": "FindStrFastEx",
+      "cn": ""
+    },
+    {
+      "name": "FindStrFastExS",
+      "cn": ""
+    },
+    {
+      "name": "FindStrFastS",
+      "cn": ""
+    },
+    {
+      "name": "FindStrS",
+      "cn": ""
+    },
+    {
+      "name": "FindStrWithFont",
+      "cn": ""
+    },
+    {
+      "name": "FindStrWithFontE",
+      "cn": ""
+    },
+    {
+      "name": "FindStrWithFontEx",
+      "cn": ""
+    },
+    {
+      "name": "GetDict",
+      "cn": ""
+    },
+    {
+      "name": "GetDictCount",
+      "cn": ""
+    },
+    {
+      "name": "GetDictInfo",
+      "cn": ""
+    },
+    {
+      "name": "GetNowDict",
+      "cn": ""
+    },
+    {
+      "name": "GetResultCount",
+      "cn": ""
+    },
+    {
+      "name": "GetResultPos",
+      "cn": ""
+    },
+    {
+      "name": "GetWordResultCount",
+      "cn": ""
+    },
+    {
+      "name": "GetWordResultPos",
+      "cn": ""
+    },
+    {
+      "name": "GetWordResultStr",
+      "cn": ""
+    },
+    {
+      "name": "GetWords",
+      "cn": ""
+    },
+    {
+      "name": "GetWordsNoDict",
+      "cn": ""
+    },
+    {
+      "name": "Ocr",
+      "cn": ""
+    },
+    {
+      "name": "OcrEx",
+      "cn": ""
+    },
+    {
+      "name": "OcrExOne",
+      "cn": ""
+    },
+    {
+      "name": "OcrInFile",
+      "cn": ""
+    },
+    {
+      "name": "SaveDict",
+      "cn": ""
+    },
+    {
+      "name": "SetColGapNoDict",
+      "cn": ""
+    },
+    {
+      "name": "SetDict",
+      "cn": ""
+    },
+    {
+      "name": "SetDictMem",
+      "cn": ""
+    },
+    {
+      "name": "SetDictPwd",
+      "cn": ""
+    },
+    {
+      "name": "SetExactOcr",
+      "cn": ""
+    },
+    {
+      "name": "SetMinColGap",
+      "cn": ""
+    },
+    {
+      "name": "SetMinRowGap",
+      "cn": ""
+    },
+    {
+      "name": "SetRowGapNoDict",
+      "cn": ""
+    },
+    {
+      "name": "SetWordGap",
+      "cn": ""
+    },
+    {
+      "name": "SetWordGapNoDict",
+      "cn": ""
+    },
+    {
+      "name": "SetWordLineHeight",
+      "cn": ""
+    },
+    {
+      "name": "SetWordLineHeightNoDict",
+      "cn": ""
+    },
+    {
+      "name": "UseDict",
+      "cn": ""
+    }
+  ],
+  "杂项": [
+    {
+      "name": "ActiveInputMethod",
+      "cn": ""
+    },
+    {
+      "name": "CheckInputMethod",
+      "cn": ""
+    },
+    {
+      "name": "EnterCri",
+      "cn": ""
+    },
+    {
+      "name": "ExecuteCmd",
+      "cn": ""
+    },
+    {
+      "name": "FindInputMethod",
+      "cn": ""
+    },
+    {
+      "name": "InitCri",
+      "cn": ""
+    },
+    {
+      "name": "LeaveCri",
+      "cn": ""
+    },
+    {
+      "name": "ReleaseRef",
+      "cn": ""
+    },
+    {
+      "name": "SetExitThread",
+      "cn": ""
+    }
+  ],
+  "汇编": [
+    {
+      "name": "AsmAdd",
+      "cn": ""
+    },
+    {
+      "name": "AsmCall",
+      "cn": ""
+    },
+    {
+      "name": "AsmCallEx",
+      "cn": ""
+    },
+    {
+      "name": "AsmClear",
+      "cn": ""
+    },
+    {
+      "name": "AsmSetTimeout",
+      "cn": ""
+    },
+    {
+      "name": "Assemble",
+      "cn": ""
+    },
+    {
+      "name": "DisAssemble",
+      "cn": ""
+    },
+    {
+      "name": "SetAsmHwndAsProcessId",
+      "cn": ""
+    },
+    {
+      "name": "SetShowAsmErrorMsg",
+      "cn": ""
+    }
+  ],
+  "窗口": [
+    {
+      "name": "ClientToScreen",
+      "cn": ""
+    },
+    {
+      "name": "EnumProcess",
+      "cn": ""
+    },
+    {
+      "name": "EnumWindow",
+      "cn": ""
+    },
+    {
+      "name": "EnumWindowByProcess",
+      "cn": ""
+    },
+    {
+      "name": "EnumWindowByProcessId",
+      "cn": ""
+    },
+    {
+      "name": "EnumWindowSuper",
+      "cn": ""
+    },
+    {
+      "name": "FindWindow",
+      "cn": ""
+    },
+    {
+      "name": "FindWindowByProcess",
+      "cn": ""
+    },
+    {
+      "name": "FindWindowByProcessId",
+      "cn": ""
+    },
+    {
+      "name": "FindWindowEx",
+      "cn": ""
+    },
+    {
+      "name": "FindWindowSuper",
+      "cn": ""
+    },
+    {
+      "name": "GetClientRect",
+      "cn": ""
+    },
+    {
+      "name": "GetClientSize",
+      "cn": ""
+    },
+    {
+      "name": "GetForegroundFocus",
+      "cn": ""
+    },
+    {
+      "name": "GetForegroundWindow",
+      "cn": ""
+    },
+    {
+      "name": "GetMousePointWindow",
+      "cn": ""
+    },
+    {
+      "name": "GetPointWindow",
+      "cn": ""
+    },
+    {
+      "name": "GetProcessInfo",
+      "cn": ""
+    },
+    {
+      "name": "GetSpecialWindow",
+      "cn": ""
+    },
+    {
+      "name": "GetWindow",
+      "cn": ""
+    },
+    {
+      "name": "GetWindowClass",
+      "cn": ""
+    },
+    {
+      "name": "GetWindowProcessId",
+      "cn": ""
+    },
+    {
+      "name": "GetWindowProcessPath",
+      "cn": ""
+    },
+    {
+      "name": "GetWindowRect",
+      "cn": ""
+    },
+    {
+      "name": "GetWindowState",
+      "cn": ""
+    },
+    {
+      "name": "GetWindowThreadId",
+      "cn": ""
+    },
+    {
+      "name": "GetWindowTitle",
+      "cn": ""
+    },
+    {
+      "name": "MoveWindow",
+      "cn": ""
+    },
+    {
+      "name": "ScreenToClient",
+      "cn": ""
+    },
+    {
+      "name": "SendPaste",
+      "cn": ""
+    },
+    {
+      "name": "SendString",
+      "cn": ""
+    },
+    {
+      "name": "SendString2",
+      "cn": ""
+    },
+    {
+      "name": "SendStringIme",
+      "cn": ""
+    },
+    {
+      "name": "SendStringIme2",
+      "cn": ""
+    },
+    {
+      "name": "SetClientSize",
+      "cn": ""
+    },
+    {
+      "name": "SetSendStringDelay",
+      "cn": ""
+    },
+    {
+      "name": "SetWindowSize",
+      "cn": ""
+    },
+    {
+      "name": "SetWindowState",
+      "cn": ""
+    },
+    {
+      "name": "SetWindowText",
+      "cn": ""
+    },
+    {
+      "name": "SetWindowTransparent",
+      "cn": ""
+    }
+  ],
+  "答题": [
+    {
+      "name": "FaqCancel",
+      "cn": ""
+    },
+    {
+      "name": "FaqCapture",
+      "cn": ""
+    },
+    {
+      "name": "FaqCaptureFromFile",
+      "cn": ""
+    },
+    {
+      "name": "FaqCaptureString",
+      "cn": ""
+    },
+    {
+      "name": "FaqFetch",
+      "cn": ""
+    },
+    {
+      "name": "FaqGetSize",
+      "cn": ""
+    },
+    {
+      "name": "FaqIsPosted",
+      "cn": ""
+    },
+    {
+      "name": "FaqPost",
+      "cn": ""
+    },
+    {
+      "name": "FaqSend",
+      "cn": ""
+    },
+    {
+      "name": "答题接口详细描述(C语言)",
+      "cn": ""
+    }
+  ],
+  "算法": [
+    {
+      "name": "ExcludePos",
+      "cn": ""
+    },
+    {
+      "name": "FindNearestPos",
+      "cn": ""
+    },
+    {
+      "name": "SortPosDistance",
+      "cn": ""
+    }
+  ],
+  "系统": [
+    {
+      "name": "Beep",
+      "cn": ""
+    },
+    {
+      "name": "CheckFontSmooth",
+      "cn": ""
+    },
+    {
+      "name": "CheckUAC",
+      "cn": ""
+    },
+    {
+      "name": "Delay",
+      "cn": ""
+    },
+    {
+      "name": "Delays",
+      "cn": ""
+    },
+    {
+      "name": "DisableCloseDisplayAndSleep",
+      "cn": ""
+    },
+    {
+      "name": "DisableFontSmooth",
+      "cn": ""
+    },
+    {
+      "name": "DisablePowerSave",
+      "cn": ""
+    },
+    {
+      "name": "DisableScreenSave",
+      "cn": ""
+    },
+    {
+      "name": "EnableFontSmooth",
+      "cn": ""
+    },
+    {
+      "name": "ExitOs",
+      "cn": ""
+    },
+    {
+      "name": "GetClipboard",
+      "cn": ""
+    },
+    {
+      "name": "GetCpuType",
+      "cn": ""
+    },
+    {
+      "name": "GetCpuUsage",
+      "cn": ""
+    },
+    {
+      "name": "GetDir",
+      "cn": ""
+    },
+    {
+      "name": "GetDiskModel",
+      "cn": ""
+    },
+    {
+      "name": "GetDiskReversion",
+      "cn": ""
+    },
+    {
+      "name": "GetDiskSerial",
+      "cn": ""
+    },
+    {
+      "name": "GetDisplayInfo",
+      "cn": ""
+    },
+    {
+      "name": "GetDPI",
+      "cn": ""
+    },
+    {
+      "name": "GetLocale",
+      "cn": ""
+    },
+    {
+      "name": "GetMachineCode",
+      "cn": ""
+    },
+    {
+      "name": "GetMachineCodeNoMac",
+      "cn": ""
+    },
+    {
+      "name": "GetMemoryUsage",
+      "cn": ""
+    },
+    {
+      "name": "GetNetTime",
+      "cn": ""
+    },
+    {
+      "name": "GetNetTimeByIp",
+      "cn": ""
+    },
+    {
+      "name": "GetNetTimeSafe",
+      "cn": ""
+    },
+    {
+      "name": "GetOsBuildNumber",
+      "cn": ""
+    },
+    {
+      "name": "GetOsType",
+      "cn": ""
+    },
+    {
+      "name": "GetScreenDepth",
+      "cn": ""
+    },
+    {
+      "name": "GetScreenHeight",
+      "cn": ""
+    },
+    {
+      "name": "GetScreenWidth",
+      "cn": ""
+    },
+    {
+      "name": "GetSystemInfo",
+      "cn": ""
+    },
+    {
+      "name": "GetTime",
+      "cn": ""
+    },
+    {
+      "name": "Is64Bit",
+      "cn": ""
+    },
+    {
+      "name": "IsSurrpotVt",
+      "cn": ""
+    },
+    {
+      "name": "Play",
+      "cn": ""
+    },
+    {
+      "name": "RunApp",
+      "cn": ""
+    },
+    {
+      "name": "SetClipboard",
+      "cn": ""
+    },
+    {
+      "name": "SetDisplayAcceler",
+      "cn": ""
+    },
+    {
+      "name": "SetLocale",
+      "cn": ""
+    },
+    {
+      "name": "SetScreen",
+      "cn": ""
+    },
+    {
+      "name": "SetUAC",
+      "cn": ""
+    },
+    {
+      "name": "ShowTaskBarIcon",
+      "cn": ""
+    },
+    {
+      "name": "Stop",
+      "cn": ""
+    }
+  ],
+  "键鼠": [
+    {
+      "name": "EnableMouseAccuracy",
+      "cn": ""
+    },
+    {
+      "name": "GetCursorPos",
+      "cn": ""
+    },
+    {
+      "name": "GetCursorShape",
+      "cn": ""
+    },
+    {
+      "name": "GetCursorShapeEx",
+      "cn": ""
+    },
+    {
+      "name": "GetCursorSpot",
+      "cn": ""
+    },
+    {
+      "name": "GetKeyState",
+      "cn": ""
+    },
+    {
+      "name": "GetMouseSpeed",
+      "cn": ""
+    },
+    {
+      "name": "KeyDown",
+      "cn": ""
+    },
+    {
+      "name": "KeyDownChar",
+      "cn": ""
+    },
+    {
+      "name": "KeyPress",
+      "cn": ""
+    },
+    {
+      "name": "KeyPressChar",
+      "cn": ""
+    },
+    {
+      "name": "KeyPressStr",
+      "cn": ""
+    },
+    {
+      "name": "KeyUp",
+      "cn": ""
+    },
+    {
+      "name": "KeyUpChar",
+      "cn": ""
+    },
+    {
+      "name": "LeftClick",
+      "cn": ""
+    },
+    {
+      "name": "LeftDoubleClick",
+      "cn": ""
+    },
+    {
+      "name": "LeftDown",
+      "cn": ""
+    },
+    {
+      "name": "LeftUp",
+      "cn": ""
+    },
+    {
+      "name": "MiddleClick",
+      "cn": ""
+    },
+    {
+      "name": "MiddleDown",
+      "cn": ""
+    },
+    {
+      "name": "MiddleUp",
+      "cn": ""
+    },
+    {
+      "name": "MoveR",
+      "cn": ""
+    },
+    {
+      "name": "MoveTo",
+      "cn": ""
+    },
+    {
+      "name": "MoveToEx",
+      "cn": ""
+    },
+    {
+      "name": "RightClick",
+      "cn": ""
+    },
+    {
+      "name": "RightDown",
+      "cn": ""
+    },
+    {
+      "name": "RightUp",
+      "cn": ""
+    },
+    {
+      "name": "SetKeypadDelay",
+      "cn": ""
+    },
+    {
+      "name": "SetMouseDelay",
+      "cn": ""
+    },
+    {
+      "name": "SetMouseSpeed",
+      "cn": ""
+    },
+    {
+      "name": "SetSimMode",
+      "cn": ""
+    },
+    {
+      "name": "WaitKey",
+      "cn": ""
+    },
+    {
+      "name": "WheelDown",
+      "cn": ""
+    },
+    {
+      "name": "WheelUp",
+      "cn": ""
+    },
+    {
+      "name": "键码对应表",
+      "cn": ""
+    }
+  ],
+  "防护盾": [
+    {
+      "name": "DmGuard",
+      "cn": ""
+    },
+    {
+      "name": "DmGuardExtract",
+      "cn": ""
+    },
+    {
+      "name": "DmGuardLoadCustom",
+      "cn": ""
+    },
+    {
+      "name": "DmGuardParams",
+      "cn": ""
+    },
+    {
+      "name": "UnLoadDriver",
+      "cn": ""
+    }
+  ]
+}
