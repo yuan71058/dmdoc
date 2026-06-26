@@ -78,8 +78,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initTheme();
   
-  // 初始化完成后发送主题到 iframe
-  setTimeout(sendThemeToIframe, 100);
+  // 等待 iframe 加载完成后发送主题
+  window.addEventListener('load', function() {
+    setTimeout(sendThemeToIframe, 200);
+  });
 
   // 主页按钮点击事件
   const homeLink = document.querySelector('.home-link');
