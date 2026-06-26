@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大漠插件简介</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "宋体", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #7f8c8d;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .intro-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .intro-section h2 {
+            color: white;
+            border-left: none;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-left: 0;
+            padding-bottom: 10px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        } highlight {
+            background-color: #d4edda;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .warning {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .warning h3 {
+            color: #721c24;
+            margin-top: 0;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 大漠插件 API 文档</h1>
+        
+        <div class="intro-section">
+            <h2>关于大漠插件</h2>
+            <p style="margin-top: 15px;">
+                大漠插件是一款功能强大的 Windows 自动化测试工具，提供丰富的接口用于窗口操作、图色识别、文字识别、内存读写等功能。
+                它广泛应用于游戏外挂、自动化测试、机器人开发等领域。
+            </p>
+        </div>
+        
+        <h2>📚 主要功能模块</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>💡 Ai 模块</h3>
+                <p>基于 AI 的图片识别功能，支持 YOLO 目标检测，提供更智能的图片匹配和识别能力。</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🎨 图色模块</h3>
+                <p>强大的颜色查找、图片查找功能，支持透明色、多点找图等高级特性。</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>💾 内存模块</h3>
+                <p>进程内存读写、搜索功能，支持整数、浮点数、字符串等多种数据类型。</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🖥️ 窗口模块</h3>
+                <p>窗口枚举、查找、控制功能，可获取窗口信息、发送消息、调整窗口状态。</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>⌨️ 键鼠模块</h3>
+                <p>模拟键盘按键和鼠标操作，支持后台模式，不影响用户正常使用电脑。</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🔤 文字识别</h3>
+                <p>OCR 文字识别功能，支持自定义字库，可识别屏幕上的文字内容。</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🛡️ 防护盾</h3>
+                <p>反调试、反注入保护功能，增强程序的自我保护能力。</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>⚙️ 后台设置</h3>
+                <p>绑定窗口、后台运行配置，实现真正的后台自动化操作。</p>
+            </div>
+        </div>
+        
+        <h2>🎯 核心特性</h2>
+        
+        <ul>
+            <li><span class="highlight">后台模式</span> - 不干扰用户正常使用，可在后台执行自动化任务</li>
+            <li><span class="highlight">多语言支持</span> - 支持 C++、C#、VB、Python 等多种编程语言调用</li>
+            <li><span class="highlight">高效稳定</span> - 底层驱动实现，性能优异，运行稳定</li>
+            <li><span class="highlight">功能全面</span> - 覆盖窗口、图色、内存、文字识别等全方位自动化需求</li>
+            <li><span class="highlight">易于使用</span> - 接口简单直观，文档详细，快速上手</li>
+        </ul>
+        
+        <h2>📖 使用说明</h2>
+        
+        <p>本文档网站包含了大漠插件所有接口的详细说明，您可以通过左侧菜单栏浏览各个功能模块：</p>
+        
+        <ol style="margin: 20px 0 20px 30px;">
+            <li>点击左侧菜单展开对应的功能模块</li>
+            <li>选择具体的函数接口查看详细文档</li>
+            <li>每个函数都包含：函数原型、参数说明、返回值说明、使用示例</li>
+            <li>如有问题，可查看"常见问题"章节</li>
+        </ol>
+        
+        <div class="warning">
+            <h3>⚠️ 注意事项</h3>
+            <p>本插件仅供学习和研究使用，请勿用于非法用途。使用者需遵守相关法律法规，承担使用本插件产生的一切后果。</p>
+        </div>
+        
+        <h2>🔗 快速导航</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>入门教程</h3>
+                <p><a href="docs/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%8F%92%E4%BB%B6.htm" target="content">如何使用本插件</a></p>
+                <p><a href="docs/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%80%E4%B8%AA%E6%A0%87%E5%87%86%E7%9A%84%E6%8F%92%E4%BB%B6%E6%B3%A8%E5%86%8C%E5%92%8C%E7%BB%91%E5%AE%9A%E7%9A%84%E4%BE%8B%E5%AD%90.htm" target="content">标准注册绑定示例</a></p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>常见问题</h3>
+                <p><a href="docs/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="content">查看 FAQ</a></p>
+                <p><a href="docs/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%80%E7%BB%91%E5%AE%9A%E7%AA%97%E5%8F%A3%E5%B0%B1%E5%B4%A9%E6%BA%83.htm" target="content">绑定崩溃问题</a></p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>核心功能</h3>
+                <p><a href="docs/%E5%9B%BE%E8%89%B2/FindPic.htm" target="content">图片查找 FindPic</a></p>
+                <p><a href="docs/%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/FindStr.htm" target="content">文字识别 FindStr</a></p>
+                <p><a href="docs/%E5%90%8E%E5%8F%B0%E8%AE%BE%E7%BD%AE/BindWindow.htm" target="content">后台绑定 BindWindow</a></p>
+            </div>
+        </div>
+        
+        <h2>💻 代码示例</h2>
+        
+        <p>以下是简单的 VBScript 示例代码：</p>
+        
+        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; margin: 15px 0;"><code>' 绑定桌面窗口
+hwnd = dm.BindWindow("自然模式", "前台", "桌面", "桌面", 0)
+
+' 查找图片
+result = dm.FindPic(0, 0, 1920, 1080, "button.bmp", "0.9", intX, intY)
+
+' 模拟点击
+if intX >= 0 then
+    dm.MoveTo(intX, intY)
+    dm.LeftClick()
+end if
+
+' 文字识别
+text = dm.FindStr(0, 0, 1920, 1080, "确定")
+
+' 解绑
+dm.UnBindWindow()</code></pre>
+        
+        <h2>📞 技术支持</h2>
+        
+        <p>如遇技术问题，建议：</p>
+        
+        <ul>
+            <li>查阅本文档的详细说明</li>
+            <li>参考"常见问题"章节</li>
+            <li>查看官方论坛或社区</li>
+            <li>联系技术支持（需购买正式版）</li>
+        </ul>
+        
+        <hr style="margin: 40px 0; border: none; border-top: 2px solid #eee;">
+        
+        <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">
+            © 大漠插件 API 文档 | 基于原版 CHM 文档转换<br>
+            最后更新：2026 年 6 月
+        </p>
+    </div>
+</body>
+</html>
