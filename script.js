@@ -56,13 +56,74 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // 向 iframe 注入主题样式（通用解决方案）
+  function injectThemeToIframe() {
+    const contentFrame = document.getElementById('contentFrame');
+    if (!contentFrame || !contentFrame.contentDocument) return;
+    
+    try {
+      const iframeDoc = contentFrame.contentDocument;
+      const isDark = document.body.classList.contains('dark-mode');
+      
+      // 检查是否已注入过样式
+      if (iframeDoc.getElementById('parent-theme-injected-style')) return;
+      
+      // 创建样式元素
+      const style = iframeDoc.createElement('style');
+      style.id = 'parent-theme-injected-style';
+      
+      if (isDark) {
+        style.textContent = `
+          body {
+            background-color: #1a1a2e !important;
+            color: #eaeaea !important;
+          }
+          body * {
+            color: inherit !important;
+          }
+          p, li, div, span {
+            color: #eaeaea !important;
+          }
+          a {
+            color: #4a9eff !important;
+          }
+          h1, h2, h3, h4, h5, h6 {
+            color: #eaeaea !important;
+          }
+          .MsoNormal, .style1 {
+            color: #eaeaea !important;
+          }
+          style {
+            color: #4a9eff !important;
+          }
+        `;
+      } else {
+        style.textContent = `
+          body {
+            color: #333 !important;
+          }
+        `;
+      }
+      
+      iframeDoc.head.appendChild(style);
+    } catch (e) {
+      console.warn('无法注入主题样式到 iframe:', e);
+    }
+  }
+
   // 向 iframe 发送主题消息
   function sendThemeToIframe() {
     const contentFrame = document.getElementById('contentFrame');
     const isDark = document.body.classList.contains('dark-mode');
-    if (contentFrame) {
-      contentFrame.contentWindow.postMessage({ theme: isDark ? 'dark' : 'light' }, '*');
+    if (contentFrame && contentFrame.contentWindow) {
+      try {
+        contentFrame.contentWindow.postMessage({ theme: isDark ? 'dark' : 'light' }, '*');
+      } catch (e) {
+        console.warn('无法向 iframe 发送主题消息:', e);
+      }
     }
+    // 同时注入样式（作为后备方案）
+    injectThemeToIframe();
   }
 
   // 主题切换按钮点击事件
@@ -84,14 +145,32 @@ document.addEventListener('DOMContentLoaded', function () {
     if (event.data && event.data.action === 'getTheme') {
       // 发送当前主题状态
       const isDark = document.body.classList.contains('dark-mode');
-      event.source.postMessage({ theme: isDark ? 'dark' : 'light' }, event.origin);
+      try {
+        event.source.postMessage({ theme: isDark ? 'dark' : 'light' }, event.origin || '*');
+      } catch (e) {
+        console.warn('无法响应 iframe 主题请求:', e);
+      }
     }
   });
   
   // 等待 iframe 加载完成后发送主题
   window.addEventListener('load', function() {
-    setTimeout(sendThemeToIframe, 200);
+    setTimeout(function() {
+      sendThemeToIframe();
+    }, 500);
   });
+
+  // 监听 iframe 导航事件，在新页面加载时重新发送主题
+  const contentFrame = document.getElementById('contentFrame');
+  if (contentFrame) {
+    contentFrame.addEventListener('load', function() {
+      setTimeout(sendThemeToIframe, 300);
+    });
+    
+    // 初始化时也注入样式
+    setTimeout(sendThemeToIframe, 200);
+  }
+});
 
   // 主页按钮点击事件
   const homeLink = document.querySelector('.home-link');
@@ -115,6 +194,22 @@ document.addEventListener('DOMContentLoaded', function () {
       sidebar.classList.toggle('collapsed');
     }
   });
+
+  // 为移动端菜单按钮添加触摸优化
+  if (menuToggle && window.innerWidth <= 768) {
+    menuToggle.style.touchAction = 'manipulation';
+    menuToggle.style.webkitTapHighlightColor = 'rgba(0,0,0,0)';
+    
+    // 添加触摸开始事件，防止双击缩放
+    menuToggle.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+      if (window.innerWidth <= 768) {
+        sidebar.classList.toggle('mobile-open');
+      } else {
+        sidebar.classList.toggle('collapsed');
+      }
+    }, { passive: false });
+  }
 
   const sectionLinks = document.querySelectorAll('.nav-item > .nav-link[data-section]');
   sectionLinks.forEach(function (link) {

@@ -489,25 +489,68 @@ dm.UnBindWindow()</code></pre>
     <script>
         // 监听来自父窗口的主题变化消息
         window.addEventListener('message', function(event) {
-            if (event.data && event.data.theme) {
-                const isDark = event.data.theme === 'dark';
-                if (isDark) {
-                    document.body.classList.add('dark-mode');
-                } else {
-                    document.body.classList.remove('dark-mode');
+            try {
+                if (event.data && event.data.theme) {
+                    const isDark = event.data.theme === 'dark';
+                    if (isDark) {
+                        document.body.classList.add('dark-mode');
+                    } else {
+                        document.body.classList.remove('dark-mode');
+                    }
                 }
+            } catch (e) {
+                console.warn('处理主题消息时出错:', e);
             }
         });
         
         // 页面加载时请求当前主题
         window.addEventListener('load', function() {
-            window.parent.postMessage({ action: 'getTheme' }, '*');
+            try {
+                window.parent.postMessage({ action: 'getTheme' }, '*');
+            } catch (e) {
+                console.warn('无法向父窗口发送主题请求:', e);
+            }
         });
         
-        // 定期请求主题（防止消息丢失）
-        setInterval(() => {
-            window.parent.postMessage({ action: 'getTheme' }, '*');
-        }, 1000);
+        // 定期请求主题（防止消息丢失）- 降低频率以避免性能问题
+        let themeRequestInterval = null;
+        
+        function startThemeSync() {
+            if (themeRequestInterval) return;
+            themeRequestInterval = setInterval(() => {
+                try {
+                    window.parent.postMessage({ action: 'getTheme' }, '*');
+                } catch (e) {
+                    console.warn('周期性主题同步失败:', e);
+                }
+            }, 3000); // 增加到 3 秒
+        }
+        
+        function stopThemeSync() {
+            if (themeRequestInterval) {
+                clearInterval(themeRequestInterval);
+                themeRequestInterval = null;
+            }
+        }
+        
+        // 页面可见时启动同步
+        if ('visibilityState' in document) {
+            document.addEventListener('visibilitychange', function() {
+                if (document.visibilityState === 'visible') {
+                    startThemeSync();
+                } else {
+                    stopThemeSync();
+                }
+            });
+            startThemeSync();
+        } else {
+            startThemeSync();
+        }
+        
+        // 页面卸载时清理
+        window.addEventListener('beforeunload', function() {
+            stopThemeSync();
+        });
     </script>
 </body>
 </html>
