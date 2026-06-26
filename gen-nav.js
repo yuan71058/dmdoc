@@ -4,6 +4,17 @@ const path = require('path');
 const root = __dirname;
 const docsDir = path.join(root, 'docs');
 
+// 加载函数描述映射
+let functionDescriptions = {};
+try {
+  const descriptionsPath = path.join(root, 'function-descriptions.json');
+  if (fs.existsSync(descriptionsPath)) {
+    functionDescriptions = JSON.parse(fs.readFileSync(descriptionsPath, 'utf8'));
+  }
+} catch (e) {
+  console.warn('Warning: Could not load function descriptions:', e.message);
+}
+
 const moduleTitles = {
   'Ai': 'Ai', 'Foobar': 'Foobar', '内存': '内存', '后台设置': '后台设置',
   '图色': '图色', '基本设置': '基本设置', '常见问题': '常见问题', '文件': '文件',
@@ -32,7 +43,15 @@ for (const mod of order) {
     const name = f.replace(/\.htm$/i, '');
     const rel = 'docs/' + mod + '/' + f;
     const encoded = encodePath(rel);
-    nav += '                            <li><a href="' + encoded + '" target="content" class="nav-link">' + name + '</a></li>\n';
+    
+    // 获取中文描述
+    let chineseDesc = functionDescriptions[name] || '';
+    let displayName = name;
+    if (chineseDesc) {
+      displayName = name + ' - ' + chineseDesc;
+    }
+    
+    nav += '                            <li><a href="' + encoded + '" target="content" class="nav-link">' + displayName + '</a></li>\n';
   }
   nav += '                        </ul>\n';
   nav += '                    </li>\n';
