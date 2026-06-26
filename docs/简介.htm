@@ -381,7 +381,10 @@ dm.UnBindWindow()</code></pre>
     </div>
     
     <script>
-        let themeReceivedFromParent = false;
+        // 只在页面加载时请求当前主题
+        window.addEventListener('load', function() {
+            window.parent.postMessage({ action: 'getTheme' }, '*');
+        });
         
         // 监听来自父窗口的主题变化消息
         window.addEventListener('message', function(event) {
@@ -392,30 +395,7 @@ dm.UnBindWindow()</code></pre>
                 } else {
                     document.body.classList.remove('dark-mode');
                 }
-                themeReceivedFromParent = true;
             }
-        });
-        
-        // 页面加载时请求当前主题
-        window.addEventListener('load', function() {
-            window.parent.postMessage({ action: 'getTheme' }, '*');
-            
-            // 延迟检查是否收到主题消息，如果没有则使用本地设置
-            setTimeout(() => {
-                if (!themeReceivedFromParent) {
-                    const savedTheme = localStorage.getItem('theme');
-                    
-                    if (savedTheme === 'dark') {
-                        document.body.classList.add('dark-mode');
-                    } else if (!savedTheme) {
-                        // 如果没有保存的设置，根据时间段自动切换
-                        const hour = new Date().getHours();
-                        if (hour >= 18 || hour < 6) {
-                            document.body.classList.add('dark-mode');
-                        }
-                    }
-                }
-            }, 100);
         });
     </script>
 </body>
