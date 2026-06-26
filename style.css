@@ -5,9 +5,45 @@
   font-family: "Microsoft YaHei", "微软雅黑", sans-serif !important;
 }
 
+/* 主题变量 */
+:root {
+  /* 亮色主题（默认） */
+  --bg-primary: #f5f7fa;
+  --bg-secondary: white;
+  --bg-tertiary: #f9fafb;
+  --bg-hover: #f3f4f6;
+  --bg-active: #ede9fe;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #c1c1c1;
+  --scrollbar-thumb-hover: #a1a1a1;
+}
+
+/* 暗色主题 */
+body.dark-mode {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-tertiary: #0f3460;
+  --bg-hover: #1a1a2e;
+  --bg-active: #2d3748;
+  --text-primary: #eaeaea;
+  --text-secondary: #cccccc;
+  --text-muted: #999999;
+  --border-color: #2d3748;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --scrollbar-track: #1a1a2e;
+  --scrollbar-thumb: #4a5568;
+  --scrollbar-thumb-hover: #718096;
+}
+
 body {
-  background: #f5f7fa;
+  background: var(--bg-primary);
   overflow: hidden;
+  transition: background-color 0.3s ease;
 }
 
 /* 顶部导航栏 */
@@ -105,11 +141,11 @@ body {
 /* 左侧边栏 */
 .sidebar {
   width: 600px;
-  background: white;
-  border-right: 1px solid #e5e7eb;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
   overflow-y: auto;
   transition: all 0.3s;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+  box-shadow: 2px 0 10px var(--shadow-color);
 }
 
 .sidebar.collapsed {
@@ -119,13 +155,13 @@ body {
 
 .sidebar-header {
   padding: 20px;
-  background: #f9fafb;
-  border-bottom: 1px solid #e5e7eb;
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .sidebar-header h3 {
   font-size: 16px;
-  color: #1f2937;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -145,7 +181,7 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  color: #4b5563;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 14px;
   transition: all 0.2s;
@@ -153,12 +189,12 @@ body {
 }
 
 .nav-link:hover {
-  background: #f3f4f6;
+  background: var(--bg-hover);
   color: #667eea;
 }
 
 .nav-link.active {
-  background: #ede9fe;
+  background: var(--bg-active);
   color: #667eea;
   font-weight: 500;
   border-left: 3px solid #667eea;
@@ -178,7 +214,7 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  background: #fafafa;
+  background: var(--bg-hover);
 }
 
 .nav-children.expanded {
@@ -198,7 +234,7 @@ body {
 .main-content {
   flex: 1;
   overflow: hidden;
-  background: white;
+  background: var(--bg-secondary);
 }
 
 .content-frame {
@@ -213,16 +249,16 @@ body {
 }
 
 .sidebar::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--scrollbar-track);
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: var(--scrollbar-thumb);
   border-radius: 3px;
 }
 
 .sidebar::-webkit-scrollbar-thumb:hover {
-  background: #a1a1a1;
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* 响应式设计 */
