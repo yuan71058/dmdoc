@@ -381,34 +381,33 @@ dm.UnBindWindow()</code></pre>
     </div>
     
     <script>
-        // 监听来自父窗口的主题变化消息
-        window.addEventListener('message', function(event) {
-            if (event.data && event.data.theme) {
-                const isDark = event.data.theme === 'dark';
-                if (isDark) {
-                    document.body.classList.add('dark-mode');
-                } else {
-                    document.body.classList.remove('dark-mode');
-                }
-            }
-        });
+        // 检查本地存储的主题设置
+        const savedTheme = localStorage.getItem('theme');
         
-        // 页面加载时发送请求获取当前主题
-        window.addEventListener('load', function() {
-            window.parent.postMessage({ action: 'getTheme' }, '*');
-        });
-        
-        // 监听父窗口发来的主题信息（重复监听，确保捕获所有消息）
-        window.addEventListener('message', function(event) {
-            if (event.data && event.data.theme) {
-                const isDark = event.data.theme === 'dark';
-                if (isDark) {
-                    document.body.classList.add('dark-mode');
-                } else {
-                    document.body.classList.remove('dark-mode');
-                }
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        } else if (!savedTheme) {
+            // 如果没有保存的设置，根据时间段自动切换
+            const hour = new Date().getHours();
+            if (hour >= 18 || hour < 6) {
+                document.body.classList.add('dark-mode');
             }
-        });
+        }
+        
+        // 监听时间变化，每分钟检查一次
+        setInterval(() => {
+            const hour = new Date().getHours();
+            const isDarkTime = hour >= 18 || hour < 6;
+            const hasDarkMode = document.body.classList.contains('dark-mode');
+            
+            if (isDarkTime && !hasDarkMode) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else if (!isDarkTime && hasDarkMode) {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        }, 60000);
     </script>
 </body>
 </html>
