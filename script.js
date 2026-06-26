@@ -108,13 +108,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  menuToggle.addEventListener('click', function () {
-    if (window.innerWidth <= 768) {
-      sidebar.classList.toggle('mobile-open');
-    } else {
-      sidebar.classList.toggle('collapsed');
-    }
-  });
+  // 菜单按钮点击事件
+  if (menuToggle) {
+    menuToggle.addEventListener('click', function () {
+      if (window.innerWidth <= 768) {
+        sidebar.classList.toggle('mobile-open');
+      } else {
+        sidebar.classList.toggle('collapsed');
+      }
+    });
+  }
 
   const sectionLinks = document.querySelectorAll('.nav-item > .nav-link[data-section]');
   sectionLinks.forEach(function (link) {
