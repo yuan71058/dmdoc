@@ -18,33 +18,34 @@ document.addEventListener('DOMContentLoaded', function () {
         updateThemeButton(false);
       }
     } else {
-      // 根据时间段自动切换
-      const hour = new Date().getHours();
+      // 默认使用浅色主题
+      // 根据时间段自动切换功能已注释
+      // const hour = new Date().getHours();
       // 晚上 6 点到早上 6 点使用暗色主题
-      if (hour >= 18 || hour < 6) {
-        document.body.classList.add('dark-mode');
-        updateThemeButton(true);
-      } else {
-        updateThemeButton(false);
-      }
+      // if (hour >= 18 || hour < 6) {
+      //   document.body.classList.add('dark-mode');
+      //   updateThemeButton(true);
+      // } else {
+      updateThemeButton(false);
+      // }
     }
     
-    // 监听时间变化，每小时检查一次
-    setInterval(() => {
-      const hour = new Date().getHours();
-      const isDarkTime = hour >= 18 || hour < 6;
-      const hasDarkMode = document.body.classList.contains('dark-mode');
-      
-      if (isDarkTime && !hasDarkMode) {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-        updateThemeButton(true);
-      } else if (!isDarkTime && hasDarkMode) {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light');
-        updateThemeButton(false);
-      }
-    }, 60000); // 每分钟检查一次
+    // 监听时间变化，每小时检查一次 - 已注释
+    // setInterval(() => {
+    //   const hour = new Date().getHours();
+    //   const isDarkTime = hour >= 18 || hour < 6;
+    //   const hasDarkMode = document.body.classList.contains('dark-mode');
+    //   
+    //   if (isDarkTime && !hasDarkMode) {
+    //     document.body.classList.add('dark-mode');
+    //     localStorage.setItem('theme', 'dark');
+    //     updateThemeButton(true);
+    //   } else if (!isDarkTime && hasDarkMode) {
+    //     document.body.classList.remove('dark-mode');
+    //     localStorage.setItem('theme', 'light');
+    //     updateThemeButton(false);
+    //   }
+    // }, 60000); // 每分钟检查一次
   }
 
   // 更新主题按钮图标
