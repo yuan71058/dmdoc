@@ -22,15 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const contentFrame = document.getElementById('contentFrame');
   const contentLinks = document.querySelectorAll('.nav-children .nav-link');
   contentLinks.forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const rawHref = link.getAttribute('href');
-      if (rawHref && rawHref !== '#') {
-        contentFrame.setAttribute('src', encodeURI(rawHref));
-      }
+    link.addEventListener('click', function () {
       contentLinks.forEach(function (l) { l.classList.remove('active'); });
       link.classList.add('active');
       if (window.innerWidth <= 768) {
