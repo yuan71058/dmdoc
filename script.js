@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.getElementById('menuToggle');
   const sidebar = document.getElementById('sidebar');
   const searchInput = document.getElementById('searchInput');
+  const themeToggle = document.getElementById('themeToggle');
 
   // ========== 主题切换功能 ==========
   function initTheme() {
@@ -12,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
       // 使用保存的设置
       if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
+        updateThemeButton(true);
+      } else {
+        updateThemeButton(false);
       }
     } else {
       // 根据时间段自动切换
@@ -19,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
       // 晚上 6 点到早上 6 点使用暗色主题
       if (hour >= 18 || hour < 6) {
         document.body.classList.add('dark-mode');
+        updateThemeButton(true);
+      } else {
+        updateThemeButton(false);
       }
     }
     
@@ -31,11 +38,30 @@ document.addEventListener('DOMContentLoaded', function () {
       if (isDarkTime && !hasDarkMode) {
         document.body.classList.add('dark-mode');
         localStorage.setItem('theme', 'dark');
+        updateThemeButton(true);
       } else if (!isDarkTime && hasDarkMode) {
         document.body.classList.remove('dark-mode');
         localStorage.setItem('theme', 'light');
+        updateThemeButton(false);
       }
     }, 60000); // 每分钟检查一次
+  }
+
+  // 更新主题按钮图标
+  function updateThemeButton(isDark) {
+    if (themeToggle) {
+      themeToggle.textContent = isDark ? '☀️' : '🌙';
+      themeToggle.title = isDark ? '切换到亮色模式' : '切换到暗色模式';
+    }
+  }
+
+  // 主题切换按钮点击事件
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      const isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeButton(isDark);
+    });
   }
 
   initTheme();
