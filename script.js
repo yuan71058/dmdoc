@@ -56,74 +56,96 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // 向 iframe 注入主题样式（通用解决方案）
-  function injectThemeToIframe() {
-    const contentFrame = document.getElementById('contentFrame');
-    if (!contentFrame || !contentFrame.contentDocument) return;
-    
-    try {
-      const iframeDoc = contentFrame.contentDocument;
-      const isDark = document.body.classList.contains('dark-mode');
-      
-      // 检查是否已注入过样式
-      if (iframeDoc.getElementById('parent-theme-injected-style')) return;
-      
-      // 创建样式元素
-      const style = iframeDoc.createElement('style');
-      style.id = 'parent-theme-injected-style';
-      
-      if (isDark) {
-        style.textContent = `
-          body {
-            background-color: #1a1a2e !important;
-            color: #eaeaea !important;
-          }
-          body * {
-            color: inherit !important;
-          }
-          p, li, div, span {
-            color: #eaeaea !important;
-          }
-          a {
-            color: #4a9eff !important;
-          }
-          h1, h2, h3, h4, h5, h6 {
-            color: #eaeaea !important;
-          }
-          .MsoNormal, .style1 {
-            color: #eaeaea !important;
-          }
-          style {
-            color: #4a9eff !important;
-          }
-        `;
-      } else {
-        style.textContent = `
-          body {
-            color: #333 !important;
-          }
-        `;
-      }
-      
-      iframeDoc.head.appendChild(style);
-    } catch (e) {
-      console.warn('无法注入主题样式到 iframe:', e);
-    }
-  }
-
-  // 向 iframe 发送主题消息
+  // 向 iframe 发送主题消息并注入样式
   function sendThemeToIframe() {
     const contentFrame = document.getElementById('contentFrame');
     const isDark = document.body.classList.contains('dark-mode');
-    if (contentFrame && contentFrame.contentWindow) {
+    if (contentFrame) {
       try {
+        // 方法1: 通过postMessage发送主题
         contentFrame.contentWindow.postMessage({ theme: isDark ? 'dark' : 'light' }, '*');
+        
+        // 方法2: 尝试向iframe内部注入暗色主题CSS(MSEdge等浏览器兼容)
+        setTimeout(() => {
+          try {
+            const iframeDoc = contentFrame.contentDocument || contentFrame.contentWindow.document;
+            if (iframeDoc && iframeDoc.body) {
+              // 创建一个style标签注入暗色主题样式
+              const darkStyle = iframeDoc.createElement('style');
+              darkStyle.id = 'injected-dark-mode';
+              darkStyle.textContent = `
+                body.dark-mode {
+                  background-color: #1a1a2e !important;
+                  color: #eaeaea !important;
+                }
+                body.dark-mode h1,
+                body.dark-mode h2,
+                body.dark-mode h3,
+                body.dark-mode h4,
+                body.dark-mode h5,
+                body.dark-mode h6 {
+                  color: #eaeaea !important;
+                }
+                body.dark-mode p,
+                body.dark-mode span,
+                body.dark-mode div,
+                body.dark-mode li,
+                body.dark-mode td,
+                body.dark-mode th {
+                  color: #cccccc !important;
+                }
+                body.dark-mode a {
+                  color: #4a9eff !important;
+                }
+                body.dark-mode .container {
+                  background: #16213e !important;
+                }
+                body.dark-mode .feature-card {
+                  background: #2d3748 !important;
+                }
+                body.dark-mode pre {
+                  background: #1a1a2e !important;
+                }
+                body.dark-mode code {
+                  background: #2d3748 !important;
+                  color: #4a9eff !important;
+                }
+                body.dark-mode .intro-section {
+                  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+                }
+                body.dark-mode .warning {
+                  background: #7f1d1d !important;
+                }
+                body.dark-mode hr {
+                  border-top-color: #2d3748 !important;
+                }
+                body:not(.dark-mode) #injected-dark-mode {
+                  display: none;
+                }
+              `;
+              // 移除已存在的旧样式
+              const oldStyle = iframeDoc.getElementById('injected-dark-mode');
+              if (oldStyle) oldStyle.remove();
+              // 添加新样式
+              iframeDoc.head.appendChild(darkStyle);
+              
+              // 应用或移除dark-mode类
+              if (isDark) {
+                iframeDoc.body.classList.add('dark-mode');
+              } else {
+                iframeDoc.body.classList.remove('dark-mode');
+              }
+            }
+          } catch (e) {
+            // 跨域限制时忽略错误
+            console.log('iframe样式注入受限:', e.message);
+          }
+        }, 300);
       } catch (e) {
-        console.warn('无法向 iframe 发送主题消息:', e);
+        // 跨域限制时忽略错误
+        console.log('iframe访问受限:', e.message);
       }
     }
-    // 同时注入样式（作为后备方案）
-    injectThemeToIframe();
   }
 
   // 主题切换按钮点击事件
@@ -133,44 +155,36 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
       updateThemeButton(isDark);
       
-      // 向 iframe 发送主题变化消息
+      // 向 iframe 发送主题变化消息并注入样式
       sendThemeToIframe();
     });
   }
 
   initTheme();
   
+  // 初始化移动端sidebar状态
+  function initSidebarState() {
+    if (window.innerWidth <= 768) {
+      sidebar.classList.remove('collapsed');
+    } else {
+      sidebar.classList.remove('mobile-open');
+    }
+  }
+  initSidebarState();
+  
   // 监听来自 iframe 的主题请求
   window.addEventListener('message', function(event) {
     if (event.data && event.data.action === 'getTheme') {
       // 发送当前主题状态
       const isDark = document.body.classList.contains('dark-mode');
-      try {
-        event.source.postMessage({ theme: isDark ? 'dark' : 'light' }, event.origin || '*');
-      } catch (e) {
-        console.warn('无法响应 iframe 主题请求:', e);
-      }
+      event.source.postMessage({ theme: isDark ? 'dark' : 'light' }, event.origin);
     }
   });
   
   // 等待 iframe 加载完成后发送主题
   window.addEventListener('load', function() {
-    setTimeout(function() {
-      sendThemeToIframe();
-    }, 500);
-  });
-
-  // 监听 iframe 导航事件，在新页面加载时重新发送主题
-  const contentFrame = document.getElementById('contentFrame');
-  if (contentFrame) {
-    contentFrame.addEventListener('load', function() {
-      setTimeout(sendThemeToIframe, 300);
-    });
-    
-    // 初始化时也注入样式
     setTimeout(sendThemeToIframe, 200);
-  }
-});
+  });
 
   // 主页按钮点击事件
   const homeLink = document.querySelector('.home-link');
@@ -187,29 +201,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  menuToggle.addEventListener('click', function () {
+  menuToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
     if (window.innerWidth <= 768) {
       sidebar.classList.toggle('mobile-open');
     } else {
       sidebar.classList.toggle('collapsed');
     }
   });
-
-  // 为移动端菜单按钮添加触摸优化
-  if (menuToggle && window.innerWidth <= 768) {
-    menuToggle.style.touchAction = 'manipulation';
-    menuToggle.style.webkitTapHighlightColor = 'rgba(0,0,0,0)';
-    
-    // 添加触摸开始事件，防止双击缩放
-    menuToggle.addEventListener('touchstart', function(e) {
-      e.preventDefault();
-      if (window.innerWidth <= 768) {
-        sidebar.classList.toggle('mobile-open');
-      } else {
-        sidebar.classList.toggle('collapsed');
+  
+  // 移动端:点击sidebar外部区域关闭菜单
+  if (window.innerWidth <= 768) {
+    document.addEventListener('click', function(e) {
+      if (sidebar.classList.contains('mobile-open')) {
+        if (!sidebar.contains(e.target) && e.target !== menuToggle && !menuToggle.contains(e.target)) {
+          sidebar.classList.remove('mobile-open');
+        }
       }
-    }, { passive: false });
+    });
   }
+  
+  // 窗口大小变化时同步sidebar状态
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      sidebar.classList.remove('mobile-open');
+    }
+  });
 
   const sectionLinks = document.querySelectorAll('.nav-item > .nav-link[data-section]');
   sectionLinks.forEach(function (link) {

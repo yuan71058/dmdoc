@@ -304,7 +304,6 @@ body.dark-mode .theme-toggle {
   .header {
     padding: 10px 15px;
     height: 50px;
-    -webkit-tap-highlight-color: transparent;
   }
   
   .header-left {
@@ -321,18 +320,9 @@ body.dark-mode .theme-toggle {
     width: 32px;
     height: 32px;
     font-size: 14px;
-    z-index: 1001 !important;
-    position: relative;
+    z-index: 1001;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-  
-  .menu-toggle:active,
-  .theme-toggle:active {
-    transform: scale(0.95);
   }
   
   .search-input {
@@ -356,14 +346,14 @@ body.dark-mode .theme-toggle {
     height: calc(100vh - 50px);
     width: 85%;
     max-width: 320px;
-    z-index: 1000 !important;
+    z-index: 1000;
     box-shadow: 2px 0 10px rgba(0,0,0,0.2);
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    -webkit-overflow-scrolling: touch;
+    transition: transform 0.3s ease, left 0.3s ease;
   }
   
   .sidebar.mobile-open {
+    left: 0;
     transform: translateX(0);
   }
   
@@ -377,7 +367,6 @@ body.dark-mode .theme-toggle {
   .nav-children .nav-link {
     padding: 8px 20px 8px 40px;
     font-size: 12px;
-    min-height: 44px;
   }
   
   .main-content {
@@ -442,12 +431,12 @@ body.dark-mode .content-frame {
   background: var(--bg-secondary);
 }
 
-/* 确保 iframe 内容在所有浏览器中正确显示 */
+/* 确保 iframe 内嵌页面在暗色主题下文字可见(跨浏览器兼容) */
 .content-frame {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  background: white;
 }
 
-/* 为所有 iframe 内的文档添加默认样式覆盖 */
-/* 这个样式会被注入到每个 iframe 页面中以确保一致性 */
+/* 暗色主题下 iframe 背景色修正 - 针对MSEdge等浏览器 */
+body.dark-mode .content-frame {
+  background: var(--bg-secondary);
+}
