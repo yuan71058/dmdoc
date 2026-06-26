@@ -391,28 +391,37 @@ dm.UnBindWindow()</code></pre>
             const hour = new Date().getHours();
             if (hour >= 18 || hour < 6) {
                 document.body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
             }
         }
         
-        // 监听时间变化，但只在用户没有手动设置时才自动切换
-        setInterval(() => {
-            const savedTheme = localStorage.getItem('theme');
-            // 如果用户已经手动设置了主题，不再自动切换
-            if (savedTheme) return;
-            
-            const hour = new Date().getHours();
-            const isDarkTime = hour >= 18 || hour < 6;
-            const hasDarkMode = document.body.classList.contains('dark-mode');
-            
-            if (isDarkTime && !hasDarkMode) {
-                document.body.classList.add('dark-mode');
-            } else if (!isDarkTime && hasDarkMode) {
-                document.body.classList.remove('dark-mode');
+        // 监听来自父窗口的主题变化消息
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme) {
+                const isDark = event.data.theme === 'dark';
+                if (isDark) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                }
             }
-        }, 60000);
+        });
+        
+        // 页面加载时请求当前主题
+        window.addEventListener('load', function() {
+            window.parent.postMessage({ action: 'getTheme' }, '*');
+        });
+        
+        // 监听父窗口发来的主题信息
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme) {
+                const isDark = event.data.theme === 'dark';
+                if (isDark) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                }
+            }
+        });
     </script>
 </body>
 </html>

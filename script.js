@@ -81,6 +81,21 @@ document.addEventListener('DOMContentLoaded', function () {
   // 初始化完成后发送主题到 iframe
   setTimeout(sendThemeToIframe, 100);
 
+  // 主页按钮点击事件
+  const homeLink = document.querySelector('.home-link');
+  if (homeLink) {
+    homeLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      // 设置 iframe 内容为简介页面
+      const contentFrame = document.getElementById('contentFrame');
+      if (contentFrame) {
+        contentFrame.src = 'docs/简介.htm';
+        // 发送当前主题状态
+        sendThemeToIframe();
+      }
+    });
+  }
+
   menuToggle.addEventListener('click', function () {
     if (window.innerWidth <= 768) {
       sidebar.classList.toggle('mobile-open');
