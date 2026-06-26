@@ -55,16 +55,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // 向 iframe 发送主题消息
+  function sendThemeToIframe() {
+    const contentFrame = document.getElementById('contentFrame');
+    const isDark = document.body.classList.contains('dark-mode');
+    if (contentFrame) {
+      contentFrame.contentWindow.postMessage({ theme: isDark ? 'dark' : 'light' }, '*');
+    }
+  }
+
   // 主题切换按钮点击事件
   if (themeToggle) {
     themeToggle.addEventListener('click', function () {
       const isDark = document.body.classList.toggle('dark-mode');
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
       updateThemeButton(isDark);
+      
+      // 向 iframe 发送主题变化消息
+      sendThemeToIframe();
     });
   }
 
   initTheme();
+  
+  // 初始化完成后发送主题到 iframe
+  setTimeout(sendThemeToIframe, 100);
 
   menuToggle.addEventListener('click', function () {
     if (window.innerWidth <= 768) {
