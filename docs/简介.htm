@@ -381,11 +381,6 @@ dm.UnBindWindow()</code></pre>
     </div>
     
     <script>
-        // 只在页面加载时请求当前主题
-        window.addEventListener('load', function() {
-            window.parent.postMessage({ action: 'getTheme' }, '*');
-        });
-        
         // 监听来自父窗口的主题变化消息
         window.addEventListener('message', function(event) {
             if (event.data && event.data.theme) {
@@ -397,6 +392,16 @@ dm.UnBindWindow()</code></pre>
                 }
             }
         });
+        
+        // 页面加载时请求当前主题
+        window.addEventListener('load', function() {
+            window.parent.postMessage({ action: 'getTheme' }, '*');
+        });
+        
+        // 定期请求主题（防止消息丢失）
+        setInterval(() => {
+            window.parent.postMessage({ action: 'getTheme' }, '*');
+        }, 1000);
     </script>
 </body>
 </html>

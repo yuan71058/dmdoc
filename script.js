@@ -78,6 +78,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initTheme();
   
+  // 监听来自 iframe 的主题请求
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.action === 'getTheme') {
+      // 发送当前主题状态
+      const isDark = document.body.classList.contains('dark-mode');
+      event.source.postMessage({ theme: isDark ? 'dark' : 'light' }, event.origin);
+    }
+  });
+  
   // 等待 iframe 加载完成后发送主题
   window.addEventListener('load', function() {
     setTimeout(sendThemeToIframe, 200);
