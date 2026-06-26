@@ -125,11 +125,7 @@ body {
 }
 
 body.dark-mode .theme-toggle {
-  content: "☀️";
-}
-
-body.dark-mode .theme-toggle::after {
-  content: "☀️";
+  background-color: #4a5568;
 }
 
 .header-right {
@@ -329,4 +325,9 @@ body.dark-mode .theme-toggle::after {
 /* 内容区样式修正 */
 .content-frame {
   background: white;
+}
+
+/* iframe 暗色主题支持 */
+body.dark-mode .content-frame {
+  background: var(--bg-secondary);
 }
