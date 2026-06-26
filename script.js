@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (menuToggle) {
     menuToggle.addEventListener('click', function (e) {
       e.stopPropagation();
+      e.preventDefault();
       if (window.innerWidth <= 768) {
         sidebar.classList.toggle('mobile-open');
       } else {
@@ -122,11 +123,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // 移动端：点击 sidebar 外部区域关闭菜单
     document.addEventListener('click', function(e) {
       if (window.innerWidth <= 768 && sidebar.classList.contains('mobile-open')) {
-        if (!sidebar.contains(e.target) && e.target !== menuToggle && !menuToggle.contains(e.target)) {
+        const isClickOutside = !sidebar.contains(e.target) && 
+                               e.target !== menuToggle && 
+                               !menuToggle.contains(e.target);
+        if (isClickOutside) {
           sidebar.classList.remove('mobile-open');
         }
       }
-    });
+    }, false);
     
     // 窗口大小变化时同步 sidebar 状态
     window.addEventListener('resize', function() {
