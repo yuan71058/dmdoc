@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=ProgId content=Word.Document>
-<title>鏃犳爣棰樻枃妗�</title>
+<title>无标题文档</title>
 
 <style>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:瀹嬩綋;
+	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-alt:SimSun;
 	mso-font-charset:134;
@@ -17,7 +17,7 @@
 	mso-font-pitch:variable;
 	mso-font-signature:3 135135232 16 0 262145 0;}
 @font-face
-	{font-family:"\@瀹嬩綋";
+	{font-family:"\@宋体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-charset:134;
 	mso-generic-font-family:auto;
@@ -30,8 +30,8 @@
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
-	font-family:瀹嬩綋;
-	mso-bidi-font-family:瀹嬩綋;}
+	font-family:宋体;
+	mso-bidi-font-family:宋体;}
 p
 	{mso-margin-top-alt:auto;
 	margin-right:0cm;
@@ -39,8 +39,8 @@ p
 	margin-left:0cm;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
-	font-family:瀹嬩綋;
-	mso-bidi-font-family:瀹嬩綋;}
+	font-family:宋体;
+	mso-bidi-font-family:宋体;}
 span.SpellE
 	{mso-style-name:"";
 	mso-spl-e:yes;}
@@ -64,48 +64,48 @@ div.Section1
 
 <div class=Section1>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>棣栧厛浠庣悊璁轰笂鏉ヨ閲婃斁鍒颁换浣曠洰褰曢兘鏄病闂鐨�<span
+<p class=MsoNormal><span style='font-size:13.5pt'>首先从理论上来说释放到任何目录都是没问题的<span
 lang=EN-US></span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>浣嗘槸鎸夐敭浠ュ強绠€鍗�<span class=GramE>娓告垨鑰�</span>灏忕簿鐏电殑<span
-class=SpellE><span lang=EN-US>Plugin</span></span>鐩綍姣旇緝鐗规畩<span lang=EN-US></span></span></p>
+<p class=MsoNormal><span style='font-size:13.5pt'>但是按键以及简单<span class=GramE>游或者</span>小精灵的<span
+class=SpellE><span lang=EN-US>Plugin</span></span>目录比较特殊<span lang=EN-US></span></span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>鍘熷洜鍦ㄤ簬鎸夐敭浼氳嚜鍔ㄦ妸<span class=SpellE><span
-lang=EN-US>Plugin</span></span>鐩綍涓嬬殑鎵€鏈�<span class=SpellE><span lang=EN-US>dll</span></span>寮鸿娉ㄥ唽鍒扮郴缁�<span
-lang=EN-US>(</span>鐩稿綋浜庤皟鐢ㄤ簡<span lang=EN-US>Regsvr32 *.<span class=SpellE>dll</span>)</span></span></p>
+<p class=MsoNormal><span style='font-size:13.5pt'>原因在于按键会自动把<span class=SpellE><span
+lang=EN-US>Plugin</span></span>目录下的所有<span class=SpellE><span lang=EN-US>dll</span></span>强行注册到系统<span
+lang=EN-US>(</span>相当于调用了<span lang=EN-US>Regsvr32 *.<span class=SpellE>dll</span>)</span></span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>鑰屼笖鎸夐敭杩樹細鑷姩涓烘瘡涓�<span
-class=SpellE><span lang=EN-US>dll</span></span>鍒涘缓鐩稿搴旂殑<span lang=EN-US>com</span>瀵硅薄锛岃繖鏍峰鑷�<span
-class=SpellE><span lang=EN-US>Plugin</span></span>涓嬬殑<span class=SpellE><span
-lang=EN-US>dll</span></span>浼氳鏆傛椂閿佸畾锛�<span lang=EN-US></span></span></p>
+<p class=MsoNormal><span style='font-size:13.5pt'>而且按键还会自动为每个<span
+class=SpellE><span lang=EN-US>dll</span></span>创建相对应的<span lang=EN-US>com</span>对象，这样导致<span
+class=SpellE><span lang=EN-US>Plugin</span></span>下的<span class=SpellE><span
+lang=EN-US>dll</span></span>会被暂时锁定，<span lang=EN-US></span></span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>姝ゆ椂<span lang=EN-US>,</span>濡傛灉鍐嶈繘琛屽姝�<span
-class=SpellE><span lang=EN-US>dll</span></span>鐨勬敞鍐�<span lang=EN-US>,</span>閮戒細澶辫触<span
+<p class=MsoNormal><span style='font-size:13.5pt'>此时<span lang=EN-US>,</span>如果再进行对此<span
+class=SpellE><span lang=EN-US>dll</span></span>的注册<span lang=EN-US>,</span>都会失败<span
 lang=EN-US>.</span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>鎵€浠ュ鏋滀綘閲婃斁鎻掍欢鍒�<span class=SpellE><span
-lang=EN-US>Plugin</span></span>鐩綍锛岄偅涔堝鑷寸殑闂灏辨槸濡傛灉瑕佽繘琛屾彃浠跺崌绾э紝寰堝彲鑳藉氨浼氬け璐ワ紝瀵艰嚧鑴氭湰閿欒<span
+<p class=MsoNormal><span style='font-size:13.5pt'>所以如果你释放插件到<span class=SpellE><span
+lang=EN-US>Plugin</span></span>目录，那么导致的问题就是如果要进行插件升级，很可能就会失败，导致脚本错误<span
 lang=EN-US>.</span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>鎵€浠ユ垜寮虹儓寤鸿澶у鍏绘垚濂戒範鎯�<span
-lang=EN-US>,</span>涓嶈鎶�<span class=SpellE><span lang=EN-US>dll</span></span>閲婃斁鍒�<span
-class=SpellE><span lang=EN-US>Plugin</span></span><span lang=EN-US>,</span>鑷繁鎵嬪姩娉ㄥ唽鏈€瀹夊叏鍙潬<span
-lang=EN-US>.</span>杩欐牱鏃㈠埄浜哄張鍒╁繁<span lang=EN-US>.</span></span></p>
+<p class=MsoNormal><span style='font-size:13.5pt'>所以我强烈建议大家养成好习惯<span
+lang=EN-US>,</span>不要把<span class=SpellE><span lang=EN-US>dll</span></span>释放到<span
+class=SpellE><span lang=EN-US>Plugin</span></span><span lang=EN-US>,</span>自己手动注册最安全可靠<span
+lang=EN-US>.</span>这样既利人又利己<span lang=EN-US>.</span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p><span style='font-size:13.5pt;color:red'>浠�<span lang=EN-US>2.1118B</span>鐗堟湰涔嬪悗锛屽ぇ婕犳彃浠跺皢绂佹閲婃斁鍒�<span
-class=SpellE><span lang=EN-US>Plugin</span></span>鐩綍锛屼互閬垮厤涓€绯诲垪鍗囩骇浜х敓鐨�<span
-lang=EN-US>BUG</span>锛�<span lang=EN-US><br>
-</span>鍚屾椂锛屼篃绂佹鐢�<span class=SpellE><span lang=EN-US>Plugin</span></span>鏂瑰紡鏉ヨ皟鐢ㄦ彃浠讹紝閭ｄ釜鏂瑰紡涔熸槸闈炲父涓嶅畨鍏ㄧ殑<span
+<p><span style='font-size:13.5pt;color:red'>从<span lang=EN-US>2.1118B</span>版本之后，大漠插件将禁止释放到<span
+class=SpellE><span lang=EN-US>Plugin</span></span>目录，以避免一系列升级产生的<span
+lang=EN-US>BUG</span>！<span lang=EN-US><br>
+</span>同时，也禁止用<span class=SpellE><span lang=EN-US>Plugin</span></span>方式来调用插件，那个方式也是非常不安全的<span
 lang=EN-US>.<br>
-</span>璇峰ぇ瀹朵弗鏍兼寜鐓�<span class=SpellE><span lang=EN-US>vbs</span></span>鐨勮娉曟潵浣跨敤鎻掍欢<span
+</span>请大家严格按照<span class=SpellE><span lang=EN-US>vbs</span></span>的语法来使用插件<span
 lang=EN-US>.</span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
@@ -129,3 +129,15 @@ lang=EN-US>.</span></span></p>
 </body>
 
 </html>
+<br>
+<table width="100%" cellspacing="0" cellpadding="0"
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color=white; border-top: 1px solid gray;"> 
+<a href="http://www.zipghost.com/" target="_blank" style="font-family: Tahoma, Verdana;
+ font-size: 11px; text-decoration: none;">The CHM file was converted to HTM by Trial version of <b>ChmD<!--89-->ecompiler</b>.</a>
+</TD>
+</TR><tr>
+<td align="right" style="background-color=white; "> 
+<a href="http://www.etextwizard.com/download/cd/cdsetup.exe" target="_blank" style="font-family: Tahoma, Verdana;
+ font-size: 11px; text-decoration: none;">Download <b>ChmDec<!--89-->ompiler</b> at: http://www.zipghost.com</a>
+</TD></tr></table>

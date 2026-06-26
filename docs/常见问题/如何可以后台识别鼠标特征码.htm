@@ -5,13 +5,13 @@ xmlns="http://www.w3.org/TR/rec-html40">
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=ProgId content=Word.Document>
-<title>鏃犳爣棰樻枃妗�</title>
+<title>无标题文档</title>
 
 <style>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:瀹嬩綋;
+	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-alt:SimSun;
 	mso-font-charset:134;
@@ -19,7 +19,7 @@ xmlns="http://www.w3.org/TR/rec-html40">
 	mso-font-pitch:variable;
 	mso-font-signature:3 135135232 16 0 262145 0;}
 @font-face
-	{font-family:"\@瀹嬩綋";
+	{font-family:"\@宋体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-charset:134;
 	mso-generic-font-family:auto;
@@ -32,8 +32,8 @@ xmlns="http://www.w3.org/TR/rec-html40">
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
-	font-family:瀹嬩綋;
-	mso-bidi-font-family:瀹嬩綋;}
+	font-family:宋体;
+	mso-bidi-font-family:宋体;}
 span.SpellE
 	{mso-style-name:"";
 	mso-spl-e:yes;}
@@ -107,14 +107,14 @@ ul
 l0 level1 lfo2;tab-stops:list 20.25pt'><span lang=EN-US
 style='font-size:13.5pt'><span style='mso-list:Ignore'>1.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span
-style='font-size:13.5pt'>鍏堢敤澶ф紶缁煎悎宸ュ叿鏉ヨ幏鍙栧墠鍙伴紶鏍囩壒寰佺爜<span lang=EN-US>,</span>濡傛灉鍓嶅彴鏃犳硶鑾峰彇鍒扮壒寰佺爜锛岄偅涔堝氨鏃犳硶鑾峰彇鍚庡彴榧犳爣鐗瑰緛鐮�<span
+style='font-size:13.5pt'>先用大漠综合工具来获取前台鼠标特征码<span lang=EN-US>,</span>如果前台无法获取到特征码，那么就无法获取后台鼠标特征码<span
 lang=EN-US>.</span></span></p>
 
 <p class=MsoNormal style='margin-left:20.25pt;text-indent:-20.25pt;mso-list:
 l0 level1 lfo2;tab-stops:list 20.25pt'><span lang=EN-US
 style='font-size:13.5pt'><span style='mso-list:Ignore'>2.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span
-style='font-size:13.5pt'>鐒跺悗鐢ㄤ互涓嬩唬鐮侊紝鏉ユ祴璇曟槸鍚︽湁榧犳爣鐗瑰緛鐮�<span lang=EN-US></span></span></p>
+style='font-size:13.5pt'>然后用以下代码，来测试是否有鼠标特征码<span lang=EN-US></span></span></p>
 
 <p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
 class=GramE><span lang=EN-US style='font-size:13.5pt;color:blue'>set</span></span><span
@@ -165,8 +165,8 @@ lang=EN-US style='font-size:13.5pt;color:blue'>Delay 100</span></p>
 <p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
 class=SpellE><span lang=EN-US style='font-size:13.5pt;color:blue'>TracePrint</span></span><span
 lang=EN-US style='font-size:13.5pt;color:blue'> <span class=SpellE>dm.GetCursorShape</span>()<br>
-// </span><span style='font-size:13.5pt;color:blue'>涓嬮潰杩欏彞鏄緭鍑哄綋鍓嶉紶鏍囩儹鐐逛綅缃�<span
-lang=EN-US>(</span>鍚屾牱鏀寔鍚庡彴<span lang=EN-US>)</span></span></p>
+// </span><span style='font-size:13.5pt;color:blue'>下面这句是输出当前鼠标热点位置<span
+lang=EN-US>(</span>同样支持后台<span lang=EN-US>)</span></span></p>
 
 <p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
 class=SpellE><span lang=EN-US style='font-size:13.5pt;color:blue'>TracePrint</span></span><span
@@ -181,20 +181,20 @@ class=GramE>dm.UnBindWindow</span></span><span class=GramE>()</span></span></p>
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt;color:blue'>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'><span
-style='mso-spacerun:yes'>&nbsp; </span></span><span style='font-size:13.5pt'>濡傛灉浠ヤ笂浠ｇ爜鍙互姝ｅ父杈撳嚭榧犳爣鐗瑰緛锛岄偅灏卞彲浠ョ‘瀹氭敮鎸佸悗鍙伴紶鏍囩壒寰�<span
+style='mso-spacerun:yes'>&nbsp; </span></span><span style='font-size:13.5pt'>如果以上代码可以正常输出鼠标特征，那就可以确定支持后台鼠标特征<span
 lang=EN-US>.</span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt;color:red'>瑕佹敞鎰忕殑鏄紝瑕佹兂姝ｇ‘鑾峰彇鍚庡彴榧犳爣鐗瑰緛锛屽繀椤诲湪<span
-class=SpellE><span lang=EN-US>dm.MoveTo</span></span>鎴栬€�<span class=SpellE><span
-lang=EN-US>MoveR</span></span>鍛戒护涔嬪悗锛屽姞鍏ヤ竴瀹氱殑寤舵椂锛屼互绛夊緟鍚庡彴鑾峰彇鍒伴紶鏍囩壒寰�<span lang=EN-US>.</span></span></p>
+<p class=MsoNormal><span style='font-size:13.5pt;color:red'>要注意的是，要想正确获取后台鼠标特征，必须在<span
+class=SpellE><span lang=EN-US>dm.MoveTo</span></span>或者<span class=SpellE><span
+lang=EN-US>MoveR</span></span>命令之后，加入一定的延时，以等待后台获取到鼠标特征<span lang=EN-US>.</span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt;color:red'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt;color:red'>涓€鐐瑰皬缁忛獙鍒嗕韩锛屾湁浜涚獥鍙ｅ湪浣跨敤涓€娆�<span
-class=SpellE><span lang=EN-US>MoveTo</span></span><span lang=EN-US> </span>鍙兘鑾峰彇涓嶅埌鐗瑰緛鐮�
-闇€瑕佸绉诲姩鍑犳 姣斿<span lang=EN-US></span></span></p>
+<p class=MsoNormal><span style='font-size:13.5pt;color:red'>一点小经验分享，有些窗口在使用一次<span
+class=SpellE><span lang=EN-US>MoveTo</span></span><span lang=EN-US> </span>可能获取不到特征码
+需要多移动几次 比如<span lang=EN-US></span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt;color:red'>For 3</span></p>
 
@@ -221,3 +221,15 @@ class=GramE>()</span></span></p>
 </body>
 
 </html>
+<br>
+<table width="100%" cellspacing="0" cellpadding="0"
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color=white; border-top: 1px solid gray;"> 
+<a href="http://www.zipghost.com/" target="_blank" style="font-family: Tahoma, Verdana;
+ font-size: 11px; text-decoration: none;">The CHM file was converted to HTM by Trial version of <b>ChmD<!--181-->ecompiler</b>.</a>
+</TD>
+</TR><tr>
+<td align="right" style="background-color=white; "> 
+<a href="http://www.etextwizard.com/download/cd/cdsetup.exe" target="_blank" style="font-family: Tahoma, Verdana;
+ font-size: 11px; text-decoration: none;">Download <b>ChmDec<!--181-->ompiler</b> at: http://www.zipghost.com</a>
+</TD></tr></table>

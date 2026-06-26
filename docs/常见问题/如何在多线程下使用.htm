@@ -5,13 +5,13 @@ xmlns="http://www.w3.org/TR/rec-html40">
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=ProgId content=Word.Document>
-<title>鏃犳爣棰樻枃妗�</title>
+<title>无标题文档</title>
 
 <style>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:瀹嬩綋;
+	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-alt:SimSun;
 	mso-font-charset:134;
@@ -19,7 +19,7 @@ xmlns="http://www.w3.org/TR/rec-html40">
 	mso-font-pitch:variable;
 	mso-font-signature:3 680460288 22 0 262145 0;}
 @font-face
-	{font-family:"\@瀹嬩綋";
+	{font-family:"\@宋体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-charset:134;
 	mso-generic-font-family:auto;
@@ -32,8 +32,8 @@ xmlns="http://www.w3.org/TR/rec-html40">
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
-	font-family:瀹嬩綋;
-	mso-bidi-font-family:瀹嬩綋;}
+	font-family:宋体;
+	mso-bidi-font-family:宋体;}
 a:link, span.MsoHyperlink
 	{color:blue;
 	text-decoration:underline;
@@ -49,8 +49,8 @@ p
 	margin-left:0cm;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
-	font-family:瀹嬩綋;
-	mso-bidi-font-family:瀹嬩綋;}
+	font-family:宋体;
+	mso-bidi-font-family:宋体;}
 span.SpellE
 	{mso-style-name:"";
 	mso-spl-e:yes;}
@@ -245,138 +245,138 @@ ul
 
 <div class=Section1>
 
-<p><span style='font-size:13.5pt'>澶氱嚎绋嬩笅浣跨敤鎻掍欢鏄竴涓緢澶嶆潅鐨勯棶棰�<span lang=EN-US>.</span></span></p>
+<p><span style='font-size:13.5pt'>多线程下使用插件是一个很复杂的问题<span lang=EN-US>.</span></span></p>
 
-<p><span style='font-size:13.5pt;color:blue'>涓€鑸潵璇翠娇鐢ㄥ绾跨▼鐨勭洰鐨勶紝鏈�<span lang=EN-US>2</span>绉嶇洰鐨勩€�<span
+<p><span style='font-size:13.5pt;color:blue'>一般来说使用多线程的目的，有<span lang=EN-US>2</span>种目的。<span
 lang=EN-US></span></span></p>
 
-<p><span style='font-size:13.5pt;color:fuchsia'>鎯呭喌<span lang=EN-US>1 </span></span><span
-style='font-size:13.5pt;color:blue'>鐢ㄥ涓嚎绋嬫帶鍒跺涓獥鍙ｇ殑鑴氭湰杩愯<span lang=EN-US>(</span>鏈€甯歌鐨勬儏鍐碉紝閫氬父鐢ㄤ簬澶氬紑<span
+<p><span style='font-size:13.5pt;color:fuchsia'>情况<span lang=EN-US>1 </span></span><span
+style='font-size:13.5pt;color:blue'>用多个线程控制多个窗口的脚本运行<span lang=EN-US>(</span>最常见的情况，通常用于多开<span
 lang=EN-US>).</span></span></p>
 
-<p><span style='font-size:13.5pt;color:fuchsia'>鎯呭喌<span lang=EN-US>2 </span></span><span
-style='font-size:13.5pt;color:blue'>鐢ㄥ涓嚎绋嬫帶鍒跺悓涓€涓獥鍙ｇ殑鑴氭湰杩愯<span lang=EN-US>(</span>閫氬父鐢ㄤ簬鐩戞帶淇℃伅锛屾瘮濡傞獙璇佷俊鎭紝鎴栧叾浠栦竴浜涚獊鍙戞€х殑鎯呭喌<span
+<p><span style='font-size:13.5pt;color:fuchsia'>情况<span lang=EN-US>2 </span></span><span
+style='font-size:13.5pt;color:blue'>用多个线程控制同一个窗口的脚本运行<span lang=EN-US>(</span>通常用于监控信息，比如验证信息，或其他一些突发性的情况<span
 lang=EN-US>).</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p><span style='font-size:13.5pt'>涓嬮潰灏卞涓婇潰鍒楀嚭鐨勫悇绉嶆儏鍐碉紝璁茶В濡備綍鍦ㄨ繖浜涙儏鍐典笅锛屼娇鐢ㄥぇ婕犳彃浠�<span
+<p><span style='font-size:13.5pt'>下面就对上面列出的各种情况，讲解如何在这些情况下，使用大漠插件<span
 lang=EN-US></span></span></p>
 
-<p><span class=GramE><span style='font-size:13.5pt;color:red'>涓€</span></span><span
+<p><span class=GramE><span style='font-size:13.5pt;color:red'>一</span></span><span
 lang=EN-US style='font-size:13.5pt;color:red'><span
 style='mso-spacerun:yes'>&nbsp; </span></span><span style='font-size:13.5pt;
-color:red'>鎸夐敭鐨勫绾跨▼<span lang=EN-US> (<a href="鎸夐敭澶氱嚎绋嬭皟鐢ㄦ彃浠�.htm"><span lang=EN-US><span
-lang=EN-US>绀轰緥浠ｇ爜鍙互鍙傝€冭繖閲�</span></span></a>)</span></span></p>
+color:red'>按键的多线程<span lang=EN-US> (<a href="按键多线程调用插件.htm"><span lang=EN-US><span
+lang=EN-US>示例代码可以参考这里</span></span></a>)</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span style='font-size:
-13.5pt;color:fuchsia'>鎯呭喌<span lang=EN-US>1</span></span></p>
+13.5pt;color:fuchsia'>情况<span lang=EN-US>1</span></span></p>
 
 <p style='margin-left:74.25pt;text-indent:-20.25pt;mso-list:l3 level1 lfo2;
 tab-stops:list 74.25pt'><span lang=EN-US style='font-size:
 13.5pt'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><span style='font-size:13.5pt'>杩欑鎯呭喌鏄渶甯歌鐨勬儏鍐碉紝鐢ㄥぇ婕犳彃浠朵笉鐢ㄧ壒鍒敞鎰忎粈涔堬紝姣忎釜绐楀彛瀵瑰簲缁戝畾涓€涓ぇ婕犲璞″嵆鍙�<span
+</span></span></span><span style='font-size:13.5pt'>这种情况是最常见的情况，用大漠插件不用特别注意什么，每个窗口对应绑定一个大漠对象即可<span
 lang=EN-US>.</span></span></p>
 
 <p style='margin-left:74.25pt;text-indent:-20.25pt;mso-list:l3 level1 lfo2;
 tab-stops:list 74.25pt'><span lang=EN-US style='font-size:
 13.5pt'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><span style='font-size:13.5pt'>杩欑鎯呭喌涓嬬敤澶氱嚎绋嬶紝鍏跺疄鍜屾寜閿殑閲嶅澶氬紑涓€鏍风殑鏁堟灉銆�<span
+</span></span></span><span style='font-size:13.5pt'>这种情况下用多线程，其实和按键的重复多开一样的效果。<span
 lang=EN-US></span></span></p>
 
-<p style='text-indent:21.0pt'><span style='font-size:13.5pt;color:fuchsia'>鎯呭喌<span
+<p style='text-indent:21.0pt'><span style='font-size:13.5pt;color:fuchsia'>情况<span
 lang=EN-US>2</span></span></p>
 
 <p style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo4;
 tab-stops:list 72.0pt'><span lang=EN-US style='font-size:
 13.5pt'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-</span></span></span><span style='font-size:13.5pt'>杩欑鎯呭喌灏辨瘮杈冪壒娈婁簡銆傝鏀寔杩欑鎯呭喌锛屽繀椤讳娇鐢ㄦ彃浠�<span
-lang=EN-US>(2.1117</span>涔嬪悗鐨勭増鏈�<span lang=EN-US>).</span></span></p>
+</span></span></span><span style='font-size:13.5pt'>这种情况就比较特殊了。要支持这种情况，必须使用插件<span
+lang=EN-US>(2.1117</span>之后的版本<span lang=EN-US>).</span></span></p>
 
 <p style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo4;
 tab-stops:list 72.0pt'><span lang=EN-US style='font-size:
 13.5pt'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-</span></span></span><span style='font-size:13.5pt'>姣忎釜绾跨▼涓紝杩樻槸鍒涘缓涓€涓ぇ婕犲璞★紝骞剁粦瀹氬悓涓€涓獥鍙�<span
+</span></span></span><span style='font-size:13.5pt'>每个线程中，还是创建一个大漠对象，并绑定同一个窗口<span
 lang=EN-US>. <br>
-</span><span style='color:purple'>鍙﹀锛岀壒鍒娉ㄦ剰锛岀粦瀹�<span class=GramE>鐨勫悓涓獥鍙�</span>鐨勭粦瀹氭ā寮忓繀椤诲畬鍏ㄤ竴鏍枫€�<span
-lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span></span>绗竴涓粦瀹氱殑澶ф紶瀵硅薄<span
-class=GramE>绉板仛</span>涓荤粦瀹氾紝<span lang=EN-US><br>
-</span>鍚庨潰鐨勯兘鍙仛鍓粦瀹氾紝鍓粦瀹氫笉鐢ㄨВ缁戜篃鍙互锛屼絾鏄竴鏃︿富缁戝畾鎺ョ粦锛岄偅涔堟墍鏈夌殑缁戝畾閮戒細澶辨晥<span lang=EN-US>.</span></span><span
+</span><span style='color:purple'>另外，特别要注意，绑定<span class=GramE>的同个窗口</span>的绑定模式必须完全一样。<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span></span>第一个绑定的大漠对象<span
+class=GramE>称做</span>主绑定，<span lang=EN-US><br>
+</span>后面的都叫做副绑定，副绑定不用解绑也可以，但是一旦主绑定接绑，那么所有的绑定都会失效<span lang=EN-US>.</span></span><span
 lang=EN-US></span></span></p>
 
 <p style='margin-left:54.0pt'><span lang=EN-US style='font-size:13.5pt'>3. </span><span
-style='font-size:13.5pt'>杩欑妯″紡涓嬶紝杩樻湁涓棶棰樿娉ㄦ剰锛屽洜涓烘瘯绔熸槸澶氱嚎绋嬶紝<span class=GramE>閿紶鐨�</span>鎿嶄綔閮芥槸寮傛鐨勶紝閭ｄ箞寰堝彲鑳�<span
-class=GramE>鍑虹幇閿紶</span><span lang=EN-US><br>
-<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>鍦ㄥ涓嚎绋�<span
-class=GramE>涓啿绐�</span>鐨勫彲鑳斤紝杩欎釜闂娌℃硶瑙ｅ喅锛屽绾跨▼鍔垮繀浼氭湁杩欐牱鐨勯棶棰樸€傚彧鑳藉缓璁皯鍦ㄥ瓙绾跨▼涓�<span lang=EN-US><br>
-<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span class=GramE>鍋氶敭榧�</span>鐨勬搷浣�<span
+style='font-size:13.5pt'>这种模式下，还有个问题要注意，因为毕竟是多线程，<span class=GramE>键鼠的</span>操作都是异步的，那么很可能<span
+class=GramE>出现键鼠</span><span lang=EN-US><br>
+<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>在多个线程<span
+class=GramE>中冲突</span>的可能，这个问题没法解决，多线程势必会有这样的问题。只能建议少在子线程中<span lang=EN-US><br>
+<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span class=GramE>做键鼠</span>的操作<span
 lang=EN-US>.</span></span></p>
 
 <p style='margin-left:54.0pt'><span lang=EN-US style='font-size:13.5pt'>4. </span><span
-style='font-size:13.5pt'>鍙﹀瑕佹敞鎰忕殑鏄紝瀛愮嚎绋嬬殑缁戝畾鎿嶄綔涓€瀹氳鍦ㄤ富绾跨▼涔嬪悗锛屼篃灏辨槸璇�<span class=SpellE><span
-lang=EN-US>BeginThread</span></span>鐨勮皟鐢ㄤ竴瀹氳鍦ㄤ富<span lang=EN-US><br>
-<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>绾跨▼鐨�<span
-class=SpellE><span lang=EN-US>BindWindow</span></span>鎴栬€�<span class=SpellE><span
-lang=EN-US>BindWindowEx</span></span>涔嬪悗杩涜<span lang=EN-US>.</span></span></p>
+style='font-size:13.5pt'>另外要注意的是，子线程的绑定操作一定要在主线程之后，也就是说<span class=SpellE><span
+lang=EN-US>BeginThread</span></span>的调用一定要在主<span lang=EN-US><br>
+<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>线程的<span
+class=SpellE><span lang=EN-US>BindWindow</span></span>或者<span class=SpellE><span
+lang=EN-US>BindWindowEx</span></span>之后进行<span lang=EN-US>.</span></span></p>
 
 <p style='margin-left:54.0pt'><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p><span style='font-size:13.5pt;color:red'>浜�<span lang=EN-US><span
-style='mso-spacerun:yes'>&nbsp; </span></span>鍏朵粬楂樼骇璇█鐨勫绾跨▼<span lang=EN-US> (</span>楂樼骇璇█妯＄増澶ф紶鎻掍欢缃戠珯鏈変笅杞�<span
+<p><span style='font-size:13.5pt;color:red'>二<span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp; </span></span>其他高级语言的多线程<span lang=EN-US> (</span>高级语言模版大漠插件网站有下载<span
 lang=EN-US>)</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt'><span style='mso-tab-count:1'>&nbsp;&nbsp; </span></span><span
-style='font-size:13.5pt'>棣栧厛锛岃娉ㄦ剰鐨勬槸锛屽ぇ婕犳彃浠舵槸鏀寔<span lang=EN-US>com</span>鐨�<span
-lang=EN-US>STA</span>鍜�<span lang=EN-US>MTA</span>绾跨▼妯″瀷锛岄珮绾ц瑷€涓娇鐢ㄥぇ婕犳彃浠讹紝寤鸿浣跨敤<span
-lang=EN-US>MTA</span>妯″瀷銆�<span lang=EN-US></span></span></p>
+style='font-size:13.5pt'>首先，要注意的是，大漠插件是支持<span lang=EN-US>com</span>的<span
+lang=EN-US>STA</span>和<span lang=EN-US>MTA</span>线程模型，高级语言中使用大漠插件，建议使用<span
+lang=EN-US>MTA</span>模型。<span lang=EN-US></span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span style='font-size:
-13.5pt'>杩欐牱鏁堢巼鏈€楂�<span lang=EN-US>. </span>褰撶劧锛�<span lang=EN-US>STA</span>涔熷彲浠ワ紝浣嗕細闄愬埗鎻掍欢鐨勫嚱鏁拌皟鐢ㄩ兘鍦ㄤ竴涓嚎绋嬪闂村唴锛屼細褰卞搷鏁堢巼<span
+13.5pt'>这样效率最高<span lang=EN-US>. </span>当然，<span lang=EN-US>STA</span>也可以，但会限制插件的函数调用都在一个线程套间内，会影响效率<span
 lang=EN-US>.</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt'><span style='mso-tab-count:1'>&nbsp;&nbsp; </span></span><span
-style='font-size:13.5pt;color:fuchsia'>鎯呭喌<span lang=EN-US>1</span></span></p>
+style='font-size:13.5pt;color:fuchsia'>情况<span lang=EN-US>1</span></span></p>
 
 <p style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo6;
 tab-stops:list 72.0pt'><span lang=EN-US style='font-size:
 13.5pt'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-</span></span></span><span style='font-size:13.5pt'>杩欑鎯呭喌鏄渶甯歌鐨勬儏鍐碉紝鐢ㄥぇ婕犳彃浠朵笉鐢ㄧ壒鍒敞鎰忎粈涔堬紝姣忎釜绐楀彛瀵瑰簲缁戝畾涓€涓ぇ婕犲璞″嵆鍙�<span
+</span></span></span><span style='font-size:13.5pt'>这种情况是最常见的情况，用大漠插件不用特别注意什么，每个窗口对应绑定一个大漠对象即可<span
 lang=EN-US>.</span></span></p>
 
-<p style='text-indent:21.0pt'><span style='font-size:13.5pt;color:fuchsia'>鎯呭喌<span
+<p style='text-indent:21.0pt'><span style='font-size:13.5pt;color:fuchsia'>情况<span
 lang=EN-US>2</span></span></p>
 
 <p style='margin-left:73.3pt;text-indent:-18.0pt;mso-list:l0 level1 lfo8;
 tab-stops:list 73.3pt'><span lang=EN-US style='font-size:
 13.5pt'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-</span></span></span><span style='font-size:13.5pt'>杩欑鎯呭喌灏辨瘮杈冪壒娈婁簡銆傝鏀寔杩欑鎯呭喌锛屽繀椤讳娇鐢ㄦ彃浠�<span
-lang=EN-US>(2.1117</span>涔嬪悗鐨勭増鏈�<span lang=EN-US>).</span></span></p>
+</span></span></span><span style='font-size:13.5pt'>这种情况就比较特殊了。要支持这种情况，必须使用插件<span
+lang=EN-US>(2.1117</span>之后的版本<span lang=EN-US>).</span></span></p>
 
 <p style='margin-left:73.3pt;text-indent:-18.0pt;mso-list:l0 level1 lfo8;
 tab-stops:list 73.3pt'><span lang=EN-US style='font-size:
 13.5pt'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-</span></span></span><span style='font-size:13.5pt'>姣忎釜绾跨▼涓紝杩樻槸鍒涘缓涓€涓ぇ婕犲璞★紝骞剁粦瀹氬悓涓€涓獥鍙�<span
+</span></span></span><span style='font-size:13.5pt'>每个线程中，还是创建一个大漠对象，并绑定同一个窗口<span
 lang=EN-US>. <br>
-</span><span style='color:purple'>鍙﹀锛岀壒鍒娉ㄦ剰锛岀粦瀹�<span class=GramE>鐨勫悓涓獥鍙�</span>鐨勭粦瀹氭ā寮忓繀椤诲畬鍏ㄤ竴鏍枫€�<span
-lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span></span>绗竴涓粦瀹氱殑澶ф紶瀵硅薄<span
-class=GramE>绉板仛</span>涓荤粦瀹氾紝<span lang=EN-US><br>
-</span>鍚庨潰鐨勯兘鍙仛鍓粦瀹氾紝鍓粦瀹氫笉鐢ㄨВ缁戜篃鍙互锛屼絾鏄竴鏃︿富缁戝畾鎺ョ粦锛岄偅涔堟墍鏈夌殑缁戝畾閮戒細澶辨晥<span lang=EN-US>..</span></span><span
+</span><span style='color:purple'>另外，特别要注意，绑定<span class=GramE>的同个窗口</span>的绑定模式必须完全一样。<span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp; </span></span>第一个绑定的大漠对象<span
+class=GramE>称做</span>主绑定，<span lang=EN-US><br>
+</span>后面的都叫做副绑定，副绑定不用解绑也可以，但是一旦主绑定接绑，那么所有的绑定都会失效<span lang=EN-US>..</span></span><span
 lang=EN-US></span></span></p>
 
 <p style='margin-left:54.0pt'><span lang=EN-US style='font-size:13.5pt'>3. </span><span
-style='font-size:13.5pt'>杩欑妯″紡涓嬶紝杩樻湁涓棶棰樿娉ㄦ剰锛屽洜涓烘瘯绔熸槸澶氱嚎绋嬶紝<span class=GramE>閿紶鐨�</span>鎿嶄綔閮芥槸寮傛鐨勶紝閭ｄ箞寰堝彲鑳�<span
-class=GramE>鍑虹幇閿紶</span><span lang=EN-US><br>
-<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>鍦ㄥ涓嚎绋�<span
-class=GramE>涓啿绐�</span>鐨勫彲鑳斤紝杩欎釜闂娌℃硶瑙ｅ喅锛屽绾跨▼鍔垮繀浼氭湁杩欐牱鐨勯棶棰樸€傚彧鑳藉缓璁皯鍦ㄥ瓙绾跨▼涓�<span lang=EN-US><br>
-<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span class=GramE>鍋氶敭榧�</span>鐨勬搷浣�<span
+style='font-size:13.5pt'>这种模式下，还有个问题要注意，因为毕竟是多线程，<span class=GramE>键鼠的</span>操作都是异步的，那么很可能<span
+class=GramE>出现键鼠</span><span lang=EN-US><br>
+<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>在多个线程<span
+class=GramE>中冲突</span>的可能，这个问题没法解决，多线程势必会有这样的问题。只能建议少在子线程中<span lang=EN-US><br>
+<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span class=GramE>做键鼠</span>的操作<span
 lang=EN-US>.</span></span></p>
 
 <p style='margin-left:54.0pt'><span lang=EN-US style='font-size:13.5pt'>4. </span><span
-style='font-size:13.5pt;color:fuchsia'>鍙﹀锛屽瓙绾跨▼鍦ㄧ粦瀹氭椂锛屼竴瀹氳<span class=GramE>绛夊埌涓�</span>绾跨▼缁戝畾缁撴潫涔嬪悗锛屽啀鎵ц缁戝畾锛�<span
+style='font-size:13.5pt;color:fuchsia'>另外，子线程在绑定时，一定要<span class=GramE>等到主</span>线程绑定结束之后，再执行绑定，<span
 lang=EN-US><br>
-<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>鍚﹀垯浼氬紩鍙戜笉鍙鐭ョ殑寮傚父<span
+<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span>否则会引发不可预知的异常<span
 lang=EN-US>.</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt'><span
@@ -385,18 +385,18 @@ style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span></p>
 <p style='margin-left:33.75pt;text-indent:-33.75pt;mso-char-indent-count:-2.5'><span
 lang=EN-US style='font-size:13.5pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-style='font-size:13.5pt'>姣斿<span class=SpellE><span lang=EN-US>vc</span></span>濡備綍璁剧疆褰撳墠绾跨▼妯″瀷涓�<span
-lang=EN-US>MTA,</span>鍙鍦ㄧ嚎绋嬪紑濮嬭皟鐢�<span class=SpellE><span lang=EN-US>CoInitializeEx</span></span><span
-lang=EN-US>(NULL,0)</span>涓€娆″嵆鍙�<span lang=EN-US>. <br>
-</span>鍏朵粬璇█鍙兘鐣ユ湁涓嶅悓<span lang=EN-US>.<br style='mso-special-character:line-break'>
+style='font-size:13.5pt'>比如<span class=SpellE><span lang=EN-US>vc</span></span>如何设置当前线程模型为<span
+lang=EN-US>MTA,</span>只要在线程开始调用<span class=SpellE><span lang=EN-US>CoInitializeEx</span></span><span
+lang=EN-US>(NULL,0)</span>一次即可<span lang=EN-US>. <br>
+</span>其他语言可能略有不同<span lang=EN-US>.<br style='mso-special-character:line-break'>
 <br style='mso-special-character:line-break'>
 </span></span></p>
 
 <p style='margin-left:33.75pt;text-indent:-33.75pt;mso-char-indent-count:-2.5'><span
 lang=EN-US style='font-size:13.5pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-style='font-size:13.5pt'>涓嬮潰鏄竴涓寜閿�<span lang=EN-US>8</span>锛屼娇鐢ㄥぇ婕犲绾跨▼鐨勪竴涓緥瀛�<span
-lang=EN-US>,</span>蹇呴』浣跨敤澶ф紶鎻掍欢<span lang=EN-US>v2.1129</span>涔嬪悗鐨勭増鏈�<span
+style='font-size:13.5pt'>下面是一个按键<span lang=EN-US>8</span>，使用大漠多线程的一个例子<span
+lang=EN-US>,</span>必须使用大漠插件<span lang=EN-US>v2.1129</span>之后的版本<span
 lang=EN-US><br>
 Set dm = <span class=SpellE>createobject</span>(&quot;<span class=SpellE>dm.dmsoft</span>&quot;)<br>
 <span class=SpellE>TracePrint</span> <span class=SpellE>dm.Ver</span>()<br>
@@ -405,39 +405,39 @@ Set dm = <span class=SpellE>createobject</span>(&quot;<span class=SpellE>dm.dmso
 <br>
 <span class=SpellE>hwnd</span> = <span class=SpellE>dm.GetMousePointWindow</span>()<br>
 <br>
-// </span>涓荤粦瀹氫竴瀹氳鍏堢粦瀹氾紝鍚庡惎鍔ㄧ嚎绋�<span lang=EN-US><br>
+// </span>主绑定一定要先绑定，后启动线程<span lang=EN-US><br>
 <span class=SpellE>dm_ret</span> = <span class=SpellE>dm.BindWindow</span>(hwnd,&quot;dx&quot;,&quot;dx&quot;,&quot;dx&quot;,0)<br>
 <br>
 <span class=SpellE>TracePrint</span> <span class=SpellE>dm_ret</span><br>
 <br>
-// </span>寮€鍚�<span lang=EN-US>3</span>涓嚎绋�<span lang=EN-US><br>
-<span class=SpellE>BeginThread</span> </span>绾跨▼鍑芥暟<span lang=EN-US>()<br>
-<span class=SpellE>BeginThread</span> </span>绾跨▼鍑芥暟<span lang=EN-US>()<br>
-<span class=SpellE>BeginThread</span> </span>绾跨▼鍑芥暟<span lang=EN-US>()<br>
+// </span>开启<span lang=EN-US>3</span>个线程<span lang=EN-US><br>
+<span class=SpellE>BeginThread</span> </span>线程函数<span lang=EN-US>()<br>
+<span class=SpellE>BeginThread</span> </span>线程函数<span lang=EN-US>()<br>
+<span class=SpellE>BeginThread</span> </span>线程函数<span lang=EN-US>()<br>
 <br>
 Do<br>
-<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>// </span>杩欓噷鍋氫富绾跨▼鐨勪簨鎯�<span
+<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>// </span>这里做主线程的事情<span
 lang=EN-US><br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>Delay 1000<br>
 Loop<br>
 <br>
 Sub <span class=SpellE>OnScriptExit</span>()<br>
-<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>// </span>杩欏彞鍙細鍦ㄤ富绾跨▼缁撴潫鏃惰璋冪敤鍒�<span
+<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>// </span>这句只会在主线程结束时被调用到<span
 lang=EN-US><br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>dm_ret</span>
 = <span class=SpellE>dm.UnBindWindow</span>()<br>
 End Sub<br>
 <br>
-Sub </span>绾跨▼鍑芥暟<span lang=EN-US>()<br>
+Sub </span>线程函数<span lang=EN-US>()<br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Set dm = <span
 class=SpellE>createobject</span>(&quot;<span class=SpellE>dm.dmsoft</span>&quot;)<br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>dm_ret</span>
 = <span class=SpellE>dm.BindWindow</span>(hwnd,&quot;dx&quot;,&quot;dx&quot;,&quot;dx&quot;,0)<br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE>TracePrint</span>
-&quot;</span>绾跨▼缁戝畾缁撴灉<span lang=EN-US>:&quot;&amp;<span class=SpellE>dm_ret</span><br>
+&quot;</span>线程绑定结果<span lang=EN-US>:&quot;&amp;<span class=SpellE>dm_ret</span><br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Do<br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>// </span>杩欓噷鍋氱嚎绋嬮噷闇€瑕佸仛鐨勪簨鎯�<span lang=EN-US><br>
+</span>// </span>这里做线程里需要做的事情<span lang=EN-US><br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>Delay 1000<br>
 <span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Loop<br>
@@ -447,17 +447,29 @@ End Sub</span></span></p>
 
 <p><span lang=EN-US style='font-size:13.5pt;color:fuchsia'>&nbsp;</span></p>
 
-<p><span style='font-size:13.5pt;color:fuchsia'>娉ㄦ剰锛�<span class=SpellE><span
-lang=EN-US>mta</span></span>鐗堟湰鐨�<span lang=EN-US>COM</span>缁勪欢鍒濆鍖栵紝蹇呴』浣跨敤<span
-class=SpellE><span lang=EN-US>CoInitializeEx</span></span>鍑芥暟锛屽弬鏁板繀椤绘槸涓や釜<span
+<p><span style='font-size:13.5pt;color:fuchsia'>注意，<span class=SpellE><span
+lang=EN-US>mta</span></span>版本的<span lang=EN-US>COM</span>组件初始化，必须使用<span
+class=SpellE><span lang=EN-US>CoInitializeEx</span></span>函数，参数必须是两个<span
 lang=EN-US>0<br>
-<span class=SpellE>sta</span></span>鐗堟湰鐨�<span lang=EN-US>COM</span>缁勪欢鍒濆鍖栵紝蹇呴』浣跨敤<span
-class=SpellE><span lang=EN-US>CoInitialize</span></span>鍑芥暟锛屽弬鏁版槸涓€涓�<span
+<span class=SpellE>sta</span></span>版本的<span lang=EN-US>COM</span>组件初始化，必须使用<span
+class=SpellE><span lang=EN-US>CoInitialize</span></span>函数，参数是一个<span
 lang=EN-US>0.<br>
-</span>姣忎釜绾跨▼寮€澶达紝閮藉繀椤昏鍒濆鍖�<span lang=EN-US>COM,</span>鍚﹀垯鍑芥暟璋冪敤浼氬紓甯�<span lang=EN-US>.</span></span></p>
+</span>每个线程开头，都必须要初始化<span lang=EN-US>COM,</span>否则函数调用会异常<span lang=EN-US>.</span></span></p>
 
 </div>
 
 </body>
 
 </html>
+<br>
+<table width="100%" cellspacing="0" cellpadding="0"
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color=white; border-top: 1px solid gray;"> 
+<a href="http://www.zipghost.com/" target="_blank" style="font-family: Tahoma, Verdana;
+ font-size: 11px; text-decoration: none;">The CHM file was converted to HTM by Trial version of <b>ChmD<!--230-->ecompiler</b>.</a>
+</TD>
+</TR><tr>
+<td align="right" style="background-color=white; "> 
+<a href="http://www.etextwizard.com/download/cd/cdsetup.exe" target="_blank" style="font-family: Tahoma, Verdana;
+ font-size: 11px; text-decoration: none;">Download <b>ChmDec<!--230-->ompiler</b> at: http://www.zipghost.com</a>
+</TD></tr></table>

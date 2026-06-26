@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=ProgId content=Word.Document>
-<title>鏃犳爣棰樻枃妗�</title>
+<title>无标题文档</title>
 
 <style>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:瀹嬩綋;
+	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-alt:SimSun;
 	mso-font-charset:134;
@@ -17,7 +17,7 @@
 	mso-font-pitch:variable;
 	mso-font-signature:3 135135232 16 0 262145 0;}
 @font-face
-	{font-family:"\@瀹嬩綋";
+	{font-family:"\@宋体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-charset:134;
 	mso-generic-font-family:auto;
@@ -30,8 +30,8 @@
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
-	font-family:瀹嬩綋;
-	mso-bidi-font-family:瀹嬩綋;}
+	font-family:宋体;
+	mso-bidi-font-family:宋体;}
 p
 	{mso-margin-top-alt:auto;
 	margin-right:0cm;
@@ -39,8 +39,8 @@ p
 	margin-left:0cm;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
-	font-family:瀹嬩綋;
-	mso-bidi-font-family:瀹嬩綋;}
+	font-family:宋体;
+	mso-bidi-font-family:宋体;}
 span.SpellE
 	{mso-style-name:"";
 	mso-spl-e:yes;}
@@ -61,40 +61,40 @@ div.Section1
 
 <div class=Section1>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>鍘熷洜杩樺湪浜庢寜閿浜�<span class=SpellE><span
-lang=EN-US>Plugin</span></span>鐨勫疄鐜版柟寮忋€�<span lang=EN-US></span></span></p>
+<p class=MsoNormal><span style='font-size:13.5pt'>原因还在于按键对于<span class=SpellE><span
+lang=EN-US>Plugin</span></span>的实现方式。<span lang=EN-US></span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>鐢变簬鎴戠殑鎻掍欢鐨勮璁℃槸涓€涓�<span lang=EN-US>dm</span>瀵硅薄瀵瑰簲涓€涓獥鍙ｈ繖鏍风殑妯″紡鏉ヨ璁＄殑銆�<span
+<p class=MsoNormal><span style='font-size:13.5pt'>由于我的插件的设计是一个<span lang=EN-US>dm</span>对象对应一个窗口这样的模式来设计的。<span
 lang=EN-US></span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>浣嗘槸濡傛灉鐢ㄤ簡<span class=SpellE><span
-lang=EN-US>Plugin</span></span>鏂瑰紡锛屽疄闄呬笂鎸夐敭鍐呴儴鍙湁涓€涓璞★紝鏃犺浣犲紑鍑犱釜鑴氭湰锛屽紑鍑犱釜绾跨▼閮芥槸濡傛銆�<span
+<p class=MsoNormal><span style='font-size:13.5pt'>但是如果用了<span class=SpellE><span
+lang=EN-US>Plugin</span></span>方式，实际上按键内部只有一个对象，无论你开几个脚本，开几个线程都是如此。<span
 lang=EN-US></span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>閭ｄ箞鍦ㄥ寮€鏃讹紝灏变細鍑虹幇闂銆�<span
+<p class=MsoNormal><span style='font-size:13.5pt'>那么在多开时，就会出现问题。<span
 lang=EN-US></span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:13.5pt'>鎵€浠ワ紝濡傛灉娌℃湁鐗瑰埆闇€姹傦紝杩樻槸鐢ㄦ爣鍑嗙殑<span
-class=SpellE><span lang=EN-US>vbs</span></span>鏂瑰紡鏉ヨ皟鐢�<span lang=EN-US>.</span></span></p>
+<p class=MsoNormal><span style='font-size:13.5pt'>所以，如果没有特别需求，还是用标准的<span
+class=SpellE><span lang=EN-US>vbs</span></span>方式来调用<span lang=EN-US>.</span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt'>&nbsp;</span></p>
 
-<p><span style='font-size:13.5pt;color:red'>浠�<span lang=EN-US>2.1118B</span>鐗堟湰涔嬪悗锛屽ぇ婕犳彃浠跺皢绂佹閲婃斁鍒�<span
-class=SpellE><span lang=EN-US>Plugin</span></span>鐩綍锛屼互閬垮厤涓€绯诲垪鍗囩骇浜х敓鐨�<span
-lang=EN-US>BUG</span>锛�<span lang=EN-US><br>
-</span>鍚屾椂锛屼篃绂佹鐢�<span class=SpellE><span lang=EN-US>Plugin</span></span>鏂瑰紡鏉ヨ皟鐢ㄦ彃浠讹紝閭ｄ釜鏂瑰紡涔熸槸闈炲父涓嶅畨鍏ㄧ殑<span
+<p><span style='font-size:13.5pt;color:red'>从<span lang=EN-US>2.1118B</span>版本之后，大漠插件将禁止释放到<span
+class=SpellE><span lang=EN-US>Plugin</span></span>目录，以避免一系列升级产生的<span
+lang=EN-US>BUG</span>！<span lang=EN-US><br>
+</span>同时，也禁止用<span class=SpellE><span lang=EN-US>Plugin</span></span>方式来调用插件，那个方式也是非常不安全的<span
 lang=EN-US>.<br>
-</span>璇峰ぇ瀹朵弗鏍兼寜鐓�<span class=SpellE><span lang=EN-US>vbs</span></span>鐨勮娉曟潵浣跨敤鎻掍欢<span
+</span>请大家严格按照<span class=SpellE><span lang=EN-US>vbs</span></span>的语法来使用插件<span
 lang=EN-US>.</span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:13.5pt;color:red'>&nbsp;</span></p>
@@ -104,3 +104,15 @@ lang=EN-US>.</span></span></p>
 </body>
 
 </html>
+<br>
+<table width="100%" cellspacing="0" cellpadding="0"
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color=white; border-top: 1px solid gray;"> 
+<a href="http://www.zipghost.com/" target="_blank" style="font-family: Tahoma, Verdana;
+ font-size: 11px; text-decoration: none;">The CHM file was converted to HTM by Trial version of <b>ChmD<!--187-->ecompiler</b>.</a>
+</TD>
+</TR><tr>
+<td align="right" style="background-color=white; "> 
+<a href="http://www.etextwizard.com/download/cd/cdsetup.exe" target="_blank" style="font-family: Tahoma, Verdana;
+ font-size: 11px; text-decoration: none;">Download <b>ChmDec<!--187-->ompiler</b> at: http://www.zipghost.com</a>
+</TD></tr></table>
