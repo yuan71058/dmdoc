@@ -18,34 +18,33 @@ document.addEventListener('DOMContentLoaded', function () {
         updateThemeButton(false);
       }
     } else {
-      // 默认使用浅色主题
-      // 根据时间段自动切换功能已注释
-      // const hour = new Date().getHours();
+      // 根据时间段自动切换
+      const hour = new Date().getHours();
       // 晚上 6 点到早上 6 点使用暗色主题
-      // if (hour >= 18 || hour < 6) {
-      //   document.body.classList.add('dark-mode');
-      //   updateThemeButton(true);
-      // } else {
-      updateThemeButton(false);
-      // }
+      if (hour >= 18 || hour < 6) {
+        document.body.classList.add('dark-mode');
+        updateThemeButton(true);
+      } else {
+        updateThemeButton(false);
+      }
     }
     
-    // 监听时间变化，每小时检查一次 - 已注释
-    // setInterval(() => {
-    //   const hour = new Date().getHours();
-    //   const isDarkTime = hour >= 18 || hour < 6;
-    //   const hasDarkMode = document.body.classList.contains('dark-mode');
-    //   
-    //   if (isDarkTime && !hasDarkMode) {
-    //     document.body.classList.add('dark-mode');
-    //     localStorage.setItem('theme', 'dark');
-    //     updateThemeButton(true);
-    //   } else if (!isDarkTime && hasDarkMode) {
-    //     document.body.classList.remove('dark-mode');
-    //     localStorage.setItem('theme', 'light');
-    //     updateThemeButton(false);
-    //   }
-    // }, 60000); // 每分钟检查一次
+    // 监听时间变化，每小时检查一次
+    setInterval(() => {
+      const hour = new Date().getHours();
+      const isDarkTime = hour >= 18 || hour < 6;
+      const hasDarkMode = document.body.classList.contains('dark-mode');
+      
+      if (isDarkTime && !hasDarkMode) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+        updateThemeButton(true);
+      } else if (!isDarkTime && hasDarkMode) {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+        updateThemeButton(false);
+      }
+    }, 60000); // 每分钟检查一次
   }
 
   // 更新主题按钮图标
@@ -56,95 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // 向 iframe 发送主题消息并注入样式
+  // 向 iframe 发送主题消息
   function sendThemeToIframe() {
     const contentFrame = document.getElementById('contentFrame');
     const isDark = document.body.classList.contains('dark-mode');
     if (contentFrame) {
-      try {
-        // 方法1: 通过postMessage发送主题
-        contentFrame.contentWindow.postMessage({ theme: isDark ? 'dark' : 'light' }, '*');
-        
-        // 方法2: 尝试向iframe内部注入暗色主题CSS(MSEdge等浏览器兼容)
-        setTimeout(() => {
-          try {
-            const iframeDoc = contentFrame.contentDocument || contentFrame.contentWindow.document;
-            if (iframeDoc && iframeDoc.body) {
-              // 创建一个style标签注入暗色主题样式
-              const darkStyle = iframeDoc.createElement('style');
-              darkStyle.id = 'injected-dark-mode';
-              darkStyle.textContent = `
-                body.dark-mode {
-                  background-color: #1a1a2e !important;
-                  color: #eaeaea !important;
-                }
-                body.dark-mode h1,
-                body.dark-mode h2,
-                body.dark-mode h3,
-                body.dark-mode h4,
-                body.dark-mode h5,
-                body.dark-mode h6 {
-                  color: #eaeaea !important;
-                }
-                body.dark-mode p,
-                body.dark-mode span,
-                body.dark-mode div,
-                body.dark-mode li,
-                body.dark-mode td,
-                body.dark-mode th {
-                  color: #cccccc !important;
-                }
-                body.dark-mode a {
-                  color: #4a9eff !important;
-                }
-                body.dark-mode .container {
-                  background: #16213e !important;
-                }
-                body.dark-mode .feature-card {
-                  background: #2d3748 !important;
-                }
-                body.dark-mode pre {
-                  background: #1a1a2e !important;
-                }
-                body.dark-mode code {
-                  background: #2d3748 !important;
-                  color: #4a9eff !important;
-                }
-                body.dark-mode .intro-section {
-                  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-                }
-                body.dark-mode .warning {
-                  background: #7f1d1d !important;
-                }
-                body.dark-mode hr {
-                  border-top-color: #2d3748 !important;
-                }
-                body:not(.dark-mode) #injected-dark-mode {
-                  display: none;
-                }
-              `;
-              // 移除已存在的旧样式
-              const oldStyle = iframeDoc.getElementById('injected-dark-mode');
-              if (oldStyle) oldStyle.remove();
-              // 添加新样式
-              iframeDoc.head.appendChild(darkStyle);
-              
-              // 应用或移除dark-mode类
-              if (isDark) {
-                iframeDoc.body.classList.add('dark-mode');
-              } else {
-                iframeDoc.body.classList.remove('dark-mode');
-              }
-            }
-          } catch (e) {
-            // 跨域限制时忽略错误
-            console.log('iframe样式注入受限:', e.message);
-          }
-        }, 300);
-      } catch (e) {
-        // 跨域限制时忽略错误
-        console.log('iframe访问受限:', e.message);
-      }
+      contentFrame.contentWindow.postMessage({ theme: isDark ? 'dark' : 'light' }, '*');
     }
   }
 
@@ -155,22 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
       updateThemeButton(isDark);
       
-      // 向 iframe 发送主题变化消息并注入样式
+      // 向 iframe 发送主题变化消息
       sendThemeToIframe();
     });
   }
 
   initTheme();
-  
-  // 初始化移动端sidebar状态
-  function initSidebarState() {
-    if (window.innerWidth <= 768) {
-      sidebar.classList.remove('collapsed');
-    } else {
-      sidebar.classList.remove('mobile-open');
-    }
-  }
-  initSidebarState();
   
   // 监听来自 iframe 的主题请求
   window.addEventListener('message', function(event) {
@@ -201,30 +107,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  menuToggle.addEventListener('click', function (e) {
-    e.stopPropagation();
+  menuToggle.addEventListener('click', function () {
     if (window.innerWidth <= 768) {
       sidebar.classList.toggle('mobile-open');
     } else {
       sidebar.classList.toggle('collapsed');
-    }
-  });
-  
-  // 移动端:点击sidebar外部区域关闭菜单
-  if (window.innerWidth <= 768) {
-    document.addEventListener('click', function(e) {
-      if (sidebar.classList.contains('mobile-open')) {
-        if (!sidebar.contains(e.target) && e.target !== menuToggle && !menuToggle.contains(e.target)) {
-          sidebar.classList.remove('mobile-open');
-        }
-      }
-    });
-  }
-  
-  // 窗口大小变化时同步sidebar状态
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-      sidebar.classList.remove('mobile-open');
     }
   });
 

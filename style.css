@@ -321,8 +321,6 @@ body.dark-mode .theme-toggle {
     height: 32px;
     font-size: 14px;
     z-index: 1001;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
   }
   
   .search-input {
@@ -349,11 +347,10 @@ body.dark-mode .theme-toggle {
     z-index: 1000;
     box-shadow: 2px 0 10px rgba(0,0,0,0.2);
     transform: translateX(-100%);
-    transition: transform 0.3s ease, left 0.3s ease;
+    transition: transform 0.3s ease;
   }
   
   .sidebar.mobile-open {
-    left: 0;
     transform: translateX(0);
   }
   
@@ -427,16 +424,6 @@ body.dark-mode .theme-toggle {
 }
 
 /* iframe 暗色主题支持 */
-body.dark-mode .content-frame {
-  background: var(--bg-secondary);
-}
-
-/* 确保 iframe 内嵌页面在暗色主题下文字可见(跨浏览器兼容) */
-.content-frame {
-  background: white;
-}
-
-/* 暗色主题下 iframe 背景色修正 - 针对MSEdge等浏览器 */
 body.dark-mode .content-frame {
   background: var(--bg-secondary);
 }
