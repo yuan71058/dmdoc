@@ -1,74 +1,251 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>大漠插件 API 文档</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="大漠插件官方 API 文档 - 473 个接口完整说明">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大漠插件 API 文档</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app">正在加载大漠插件 API 文档...</div>
-  
-  <script>
-    window.$docsify = {
-      name: '大漠插件 API 文档',
-      repo: 'https://github.com/yuan71058/dmdoc',
-      loadSidebar: true,
-      maxLevel: 3,
-      subMaxLevel: 2,
-      autoHeader: false,
-      loadNavbar: true,
-      mergeNavbar: true,
-      externalLinkTarget: '_blank',
-      themeColor: '#3b82f6',
-      fontSize: '16px',
-      linkColor: '#2c3e50',
-      sidebarDisplayLevel: 1,
-      search: {
-        placeholder: '搜索 API 文档...',
-        noData: '未找到相关内容',
-        paths: 'auto',
-        depth: 3
-      },
-      highlight: {
-        cache: true,
-        config: {
-          tabReplace: '  ',
-          useBR: true
-        }
-      },
-      copyCode: {
-        buttonText: '复制代码',
-        errorText: '失败',
-        successText: '已复制'
-      },
-      pagination: {
-        previousText: '上一篇',
-        nextText: '下一篇',
-        crossChapter: true,
-        crossChapterText: true
-      },
-      coverpage: true,
-      onlyCover: false,
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      }
-    }
-  </script>
-  
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-link-symbol.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-vb.min.js"></script>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <h1 class="logo">大漠插件 API 文档</h1>
+        </div>
+        <div class="header-right">
+            <input type="text" class="search-input" id="searchInput" placeholder="搜索文档...">
+            <a href="https://github.com/yuan71058/dmdoc" target="_blank" class="github-link">GitHub</a>
+        </div>
+    </header>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <!-- 左侧目录树 -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>文档目录</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="intro">
+                            <span class="nav-icon">📚</span>
+                            <span class="nav-text">入门指南</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/杂项/一个标准的插件注册和绑定的例子.htm" target="content" class="nav-link">标准注册绑定示例</a></li>
+                            <li><a href="docs/杂项/如何使用本插件.htm" target="content" class="nav-link">如何使用本插件</a></li>
+                            <li><a href="docs/杂项/VBS 调用规范.htm" target="content" class="nav-link">VBS 调用规范</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="ai">
+                            <span class="nav-icon">🤖</span>
+                            <span class="nav-text">AI 功能</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/Ai/Ai 接口综述.htm" target="content" class="nav-link">Ai 接口综述</a></li>
+                            <li><a href="docs/Ai/LoadAi.htm" target="content" class="nav-link">LoadAi</a></li>
+                            <li><a href="docs/Ai/LoadAiMemory.htm" target="content" class="nav-link">LoadAiMemory</a></li>
+                            <li><a href="docs/Ai/AiYoloSetModel.htm" target="content" class="nav-link">AiYoloSetModel</a></li>
+                            <li><a href="docs/Ai/AiYoloUseModel.htm" target="content" class="nav-link">AiYoloUseModel</a></li>
+                            <li><a href="docs/Ai/AiYoloDetectObjects.htm" target="content" class="nav-link">AiYoloDetectObjects</a></li>
+                            <li><a href="docs/Ai/AiFindPic.htm" target="content" class="nav-link">AiFindPic</a></li>
+                            <li><a href="docs/Ai/AiFindPicEx.htm" target="content" class="nav-link">AiFindPicEx</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="window">
+                            <span class="nav-icon">🪟</span>
+                            <span class="nav-text">窗口管理</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/窗口/EnumWindow.htm" target="content" class="nav-link">EnumWindow</a></li>
+                            <li><a href="docs/窗口/FindWindow.htm" target="content" class="nav-link">FindWindow</a></li>
+                            <li><a href="docs/窗口/FindWindowEx.htm" target="content" class="nav-link">FindWindowEx</a></li>
+                            <li><a href="docs/窗口/GetWindowTitle.htm" target="content" class="nav-link">GetWindowTitle</a></li>
+                            <li><a href="docs/窗口/GetWindowRect.htm" target="content" class="nav-link">GetWindowRect</a></li>
+                            <li><a href="docs/窗口/MoveWindow.htm" target="content" class="nav-link">MoveWindow</a></li>
+                            <li><a href="docs/窗口/SetWindowState.htm" target="content" class="nav-link">SetWindowState</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="image">
+                            <span class="nav-icon">🖼️</span>
+                            <span class="nav-text">图像颜色</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/图色/Capture.htm" target="content" class="nav-link">Capture</a></li>
+                            <li><a href="docs/图色/CapturePng.htm" target="content" class="nav-link">CapturePng</a></li>
+                            <li><a href="docs/图色/GetColor.htm" target="content" class="nav-link">GetColor</a></li>
+                            <li><a href="docs/图色/FindPic.htm" target="content" class="nav-link">FindPic</a></li>
+                            <li><a href="docs/图色/FindColor.htm" target="content" class="nav-link">FindColor</a></li>
+                            <li><a href="docs/图色/FindMultiColor.htm" target="content" class="nav-link">FindMultiColor</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="text">
+                            <span class="nav-icon">📝</span>
+                            <span class="nav-text">文字识别</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/文字识别/Ocr.htm" target="content" class="nav-link">Ocr</a></li>
+                            <li><a href="docs/文字识别/FindStr.htm" target="content" class="nav-link">FindStr</a></li>
+                            <li><a href="docs/文字识别/SetDict.htm" target="content" class="nav-link">SetDict</a></li>
+                            <li><a href="docs/文字识别/GetResultCount.htm" target="content" class="nav-link">GetResultCount</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="memory">
+                            <span class="nav-icon">💾</span>
+                            <span class="nav-text">内存操作</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/内存/ReadInt.htm" target="content" class="nav-link">ReadInt</a></li>
+                            <li><a href="docs/内存/WriteInt.htm" target="content" class="nav-link">WriteInt</a></li>
+                            <li><a href="docs/内存/FindInt.htm" target="content" class="nav-link">FindInt</a></li>
+                            <li><a href="docs/内存/OpenProcess.htm" target="content" class="nav-link">OpenProcess</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="backend">
+                            <span class="nav-icon">⚙️</span>
+                            <span class="nav-text">后台设置</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/后台设置/BindWindow.htm" target="content" class="nav-link">BindWindow</a></li>
+                            <li><a href="docs/后台设置/UnBindWindow.htm" target="content" class="nav-link">UnBindWindow</a></li>
+                            <li><a href="docs/后台设置/EnableFakeActive.htm" target="content" class="nav-link">EnableFakeActive</a></li>
+                            <li><a href="docs/后台设置/DownCpu.htm" target="content" class="nav-link">DownCpu</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="keymouse">
+                            <span class="nav-icon">🖱️</span>
+                            <span class="nav-text">键鼠模拟</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/键鼠/MoveTo.htm" target="content" class="nav-link">MoveTo</a></li>
+                            <li><a href="docs/键鼠/LeftClick.htm" target="content" class="nav-link">LeftClick</a></li>
+                            <li><a href="docs/键鼠/KeyPress.htm" target="content" class="nav-link">KeyPress</a></li>
+                            <li><a href="docs/键鼠/GetCursorPos.htm" target="content" class="nav-link">GetCursorPos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="system">
+                            <span class="nav-icon">💻</span>
+                            <span class="nav-text">系统信息</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/系统/Delay.htm" target="content" class="nav-link">Delay</a></li>
+                            <li><a href="docs/系统/GetNetTime.htm" target="content" class="nav-link">GetNetTime</a></li>
+                            <li><a href="docs/系统/GetScreenWidth.htm" target="content" class="nav-link">GetScreenWidth</a></li>
+                            <li><a href="docs/系统/GetClipboard.htm" target="content" class="nav-link">GetClipboard</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="file">
+                            <span class="nav-icon">📁</span>
+                            <span class="nav-text">文件系统</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/文件/ReadFile.htm" target="content" class="nav-link">ReadFile</a></li>
+                            <li><a href="docs/文件/WriteFile.htm" target="content" class="nav-link">WriteFile</a></li>
+                            <li><a href="docs/文件/ReadIni.htm" target="content" class="nav-link">ReadIni</a></li>
+                            <li><a href="docs/文件/WriteIni.htm" target="content" class="nav-link">WriteIni</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="basic">
+                            <span class="nav-icon">⚙️</span>
+                            <span class="nav-text">基本设置</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/基本设置/SetPath.htm" target="content" class="nav-link">SetPath</a></li>
+                            <li><a href="docs/基本设置/Ver.htm" target="content" class="nav-link">Ver</a></li>
+                            <li><a href="docs/基本设置/Reg.htm" target="content" class="nav-link">Reg</a></li>
+                            <li><a href="docs/基本设置/GetLastError.htm" target="content" class="nav-link">GetLastError</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="assembly">
+                            <span class="nav-icon">💻</span>
+                            <span class="nav-text">汇编功能</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/汇编/AsmAdd.htm" target="content" class="nav-link">AsmAdd</a></li>
+                            <li><a href="docs/汇编/AsmCall.htm" target="content" class="nav-link">AsmCall</a></li>
+                            <li><a href="docs/汇编/Assemble.htm" target="content" class="nav-link">Assemble</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="captcha">
+                            <span class="nav-icon">📸</span>
+                            <span class="nav-text">验证码</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/答题/FaqCapture.htm" target="content" class="nav-link">FaqCapture</a></li>
+                            <li><a href="docs/答题/FaqFetch.htm" target="content" class="nav-link">FaqFetch</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="foobar">
+                            <span class="nav-icon">🎨</span>
+                            <span class="nav-text">绘图板</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/Foobar/CreateFoobarRect.htm" target="content" class="nav-link">CreateFoobarRect</a></li>
+                            <li><a href="docs/Foobar/FoobarDrawLine.htm" target="content" class="nav-link">FoobarDrawLine</a></li>
+                            <li><a href="docs/Foobar/FoobarDrawText.htm" target="content" class="nav-link">FoobarDrawText</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="algo">
+                            <span class="nav-icon">🔧</span>
+                            <span class="nav-text">算法工具</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/算法/ExcludePos.htm" target="content" class="nav-link">ExcludePos</a></li>
+                            <li><a href="docs/算法/FindNearestPos.htm" target="content" class="nav-link">FindNearestPos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="faq">
+                            <span class="nav-icon">❓</span>
+                            <span class="nav-text">常见问题</span>
+                        </a>
+                        <ul class="nav-children">
+                            <li><a href="docs/杂项/如何注册.htm" target="content" class="nav-link">如何注册</a></li>
+                            <li><a href="docs/杂项/收费政策历史版本.htm" target="content" class="nav-link">收费政策</a></li>
+                            <li><a href="docs/杂项/插件使用协议.htm" target="content" class="nav-link">使用协议</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 右侧内容显示区 -->
+        <main class="main-content">
+            <iframe name="content" src="docs/杂项/一个标准的插件注册和绑定的例子.htm" class="content-frame" id="contentFrame"></iframe>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
